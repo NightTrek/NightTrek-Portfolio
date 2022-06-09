@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Portfolio-Website/react-portfolio-frontend"
+		}
+	],
+	"settings": {
+		"javascript.validate.enable": true,
+	}
+}
