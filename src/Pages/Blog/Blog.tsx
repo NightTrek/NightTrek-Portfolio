@@ -13,11 +13,10 @@ import post2 from './blog-post.2.md';
 import post3 from './blog-post.3.md';
 
 
-
 const mainFeaturedPost = {
   title: 'The Three takeaways from being the lead Developer for the Dapper Dino Dapp',
   description:
-    "Developing a Full NFT Breeding experience for the Dapper dino NFT on Polygon. From PFP to full functional Dapp complete with cross collection Breeding. ",
+    'Developing a Full NFT Breeding experience for the Dapper dino NFT on Polygon. From PFP to full functional Dapp complete with cross collection Breeding. ',
   image: 'https://source.unsplash.com/random',
   imageText: 'main image description',
   linkText: 'Continue reading…',
@@ -42,20 +41,20 @@ const featuredPosts = [
   },
 ];
 
-const posts = [post1, post2, post3];
+const posts = [ post1, post2, post3 ];
 
 const sidebar = {
   title: 'About',
   description:
     'The experience of becoming a software engineer. How I went from being a student with a dream to full time software developer in the Web3 space.',
   archives: [
-    { title: 'November 2021', url: '#' },
-    { title: 'June 2019', url: '#' },
-    { title: 'April 2018', url: '#' },
+    {title: 'November 2021', url: '#'},
+    {title: 'June 2019', url: '#'},
+    {title: 'April 2018', url: '#'},
   ],
   social: [
-    { name: 'GitHub', icon: GitHubIcon, url: "https://github.com/NightTrek" },
-    { name: 'Twitter', icon: TwitterIcon, url: "https://twitter.com/NighttrekETH" },
+    {name: 'GitHub', icon: GitHubIcon, url: "https://github.com/NightTrek"},
+    {name: 'Twitter', icon: TwitterIcon, url: "https://twitter.com/NighttrekETH"},
   ],
 };
 
@@ -69,15 +68,15 @@ export default function Blog() {
               <FeaturedPost key={post.title} post={post} />
             ))}
           </Grid>
-          <Grid container spacing={5} sx={{ mt: 3 }}>
+          <Grid container spacing={5} sx={{mt: 3}}>
             <Main title="Start here" posts={posts} />
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
-              archives={sidebar.archives}
-              social={sidebar.social}
-            />
-          </Grid>
-        </main>
+          archives={sidebar.archives}
+          social={sidebar.social}
+        />
+      </Grid>
+    </main>
   );
 }

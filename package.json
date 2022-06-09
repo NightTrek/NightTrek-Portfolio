@@ -1,5 +1,5 @@
 {
-  "name": "NightTrek Web3 Portfolio site",
+  "name": "nighttrek-web3-portfolio",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -9,6 +9,10 @@
     "@mui/material": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-google-camelcase": "0.0.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "firebase": "^9.8.2",
     "markdown-to-jsx": "^7.1.7",
     "react": "latest",
     "react-dom": "latest",
@@ -32,5 +36,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint": "^8.17.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.30.0",
+    "prettier": "^2.6.2"
   }
 }
