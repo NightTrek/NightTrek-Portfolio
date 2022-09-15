@@ -222,7 +222,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'require-await': 'off',
-    'require-jsdoc': 'warn',
+    'require-jsdoc': 'off',
     'rest-spread-spacing': 'error',
     semi: 'off',
     'semi-spacing': 'error',

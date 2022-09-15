@@ -1,8 +1,10 @@
 import * as React from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
-import App from './App';
+import Blog from "./Pages/Blog/Blog";
+import LandingPage from "./Pages/LandingPage/index";
 import theme from './theme';
 import Header from './Header';
 import Footer from './Footer';
@@ -13,16 +15,12 @@ import { getAnalytics } from "firebase/analytics";
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement!);
 const sections = [
-  { title: 'Technology', url: '#' },
-  { title: 'Design', url: '#' },
-  { title: 'Culture', url: '#' },
+  { title: 'About Me', url: '#' },
+  { title: 'Product Showcase', url: '#' },
   { title: 'Business', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
-  { title: 'Science', url: '#' },
-  { title: 'Health', url: '#' },
-  { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },
+  { title: 'Culture', url: '#' },
+
+
 ];
 
 
@@ -51,7 +49,12 @@ root.render(
     {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
     <CssBaseline />
     <Header title="Blog" sections={sections} />
-    <App />
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage/>}/>
+        <Route path="/blog" element={<Blog/>}/>
+      </Routes>
+    </Router>
     <Footer
         title="Footer"
         description="Something here to give the footer a purpose!"

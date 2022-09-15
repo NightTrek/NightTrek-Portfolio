@@ -16,6 +16,7 @@
     "markdown-to-jsx": "^7.1.7",
     "react": "latest",
     "react-dom": "latest",
+    "react-router-dom": "^6.4.0",
     "react-scripts": "latest",
     "typescript": "latest"
   },
