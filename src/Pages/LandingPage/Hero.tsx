@@ -5,6 +5,10 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typeography from '@mui/material/Typography';
 
+import SchoolIcon from '@mui/icons-material/School';
+import Web3Icon from '@mui/icons-material/AccountTree';
+import IotIcon from '@mui/icons-material/DeveloperBoard';
+
 const Hero = (): React.ReactElement<any, any> => {
     const itemData = [
         {
@@ -32,6 +36,18 @@ const Hero = (): React.ReactElement<any, any> => {
             cols: 1,
         },
     ];
+
+    const scrollToID = (id: string) => {
+        const idRef = document.getElementById(id);
+        if (idRef) {
+            window.scrollTo({
+                top:idRef.offsetTop,
+                behavior:"smooth"
+            });
+        } else {
+            console.log("ID ref null")
+        }
+    }
 
     return (
         <div>
@@ -92,41 +108,124 @@ const Hero = (): React.ReactElement<any, any> => {
             <Box
                 sx={{
                     width: '100%',
-                    height: '356px',
-                    backgroundColor: '#4361ee',
+                    // height: '356px',
+                    backgroundColor: '#7209b7',
                     padding: '24px',
                     marginTop: '-24px',
                 }}>
-                <Grid
-                    container
-                    direction="row"
-                    justifyContent="space-around"
-                    alignItems="center"
-                    spacing={4}>
-                    <Grid xs={12}>
-                        <Typeography
-                            variant="h2"
-                            component={'h3'}
-                            m={4}
-                            mt={6}
-                            mb={1}
-                            align={'center'}>
-                            Every project is a story waiting to be heard.
-                        </Typeography>
-                    </Grid>
-                    <Grid  container xs={12} alignItems="center" justifyContent="center">
-                        {/* <Grid xs={12} alignItems="center" justifyContent="center"> */}
+                <Grid container direction="column" spacing="1">
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="space-around"
+                        alignItems="center"
+                        spacing={4}>
+                        <Grid xs={12}>
+                            <Typeography
+                                variant="h2"
+                                component={'h3'}
+                                m={4}
+                                mt={6}
+                                mb={1}
+                                align={'center'}>
+                                Every project is a story waiting to be heard.
+                            </Typeography>
+                        </Grid>
+                        <Grid
+                            container
+                            xs={12}
+                            alignItems="center"
+                            justifyContent="center">
+                            {/* <Grid xs={12} alignItems="center" justifyContent="center"> */}
                             <Typeography
                                 variant="h4"
                                 component={'h4'}
                                 m={4}
                                 align={'center'}
-                                width={{ width: '60%'}}>
+                                width={{ width: '60%' }}>
                                 Find all of my biggest projects and their
                                 stories here. Experience the challenges and hard
                                 work that taught me.
                             </Typeography>
-                        {/* </Grid> */}
+                            {/* </Grid> */}
+                        </Grid>
+                    </Grid>
+                    <Grid
+                        container
+                        direction="row"
+                        alignItems="center"
+                        justifyContent="center"
+                        spacing="3"
+                        paddingBottom={"36px"}>
+                        <Grid xs={12} sm={3}>
+                            <Box
+                                sx={{
+                                    '&:hover': {
+                                        // backgroundColor: 'primary.main',
+                                        opacity: [0.9, 0.8, 0.7],
+                                    },
+                                }}
+                                onClick={() => {
+                                    scrollToID("web3");
+                                }}>
+                                <Grid
+                                    container
+                                    direction="column"
+                                    alignItems="center"
+                                    justifyContent="center">
+                                    <Web3Icon sx={{fontSize:"48px"}}/>
+                                    <Typeography variant="subtitle1">
+                                        Web3
+                                    </Typeography>
+                                </Grid>
+                            </Box>
+                        </Grid>
+                        <Grid xs={12} sm={3}>
+                            <Box
+                                sx={{
+                                    '&:hover': {
+                                        // backgroundColor: 'primary.main',
+                                        opacity: [0.9, 0.8, 0.7],
+                                    },
+                                }}
+                                onClick={() => {
+                                    scrollToID("iot");
+                                }}>
+                                <Grid
+                                    container
+                                    direction="column"
+                                    alignItems="center"
+                                    justifyContent="center">
+                                    <IotIcon sx={{fontSize:"48px"}}/>
+                                    <Typeography variant="subtitle1">
+                                        Internet of Things
+                                    </Typeography>
+                                </Grid>
+                            </Box>
+                        </Grid>
+                        <Grid xs={12} sm={3}>
+                            <Box
+                                sx={{
+                                    '&:hover': {
+                                        // backgroundColor: 'primary.main',
+                                        opacity: [0.9, 0.8, 0.7],
+                                    },
+                                }}
+                                onClick={() => {
+                                    scrollToID("diy");
+                                }}>
+                                <Grid
+                                    container
+                                    direction="column"
+                                    alignItems="center"
+                                    justifyContent="center">
+                                    <SchoolIcon sx={{fontSize:"48px"}}/>
+                                    <Typeography variant="subtitle1">
+                                        Learning
+                                    </Typeography>
+                                </Grid>
+                            </Box>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Box>
