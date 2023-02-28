@@ -3,56 +3,61 @@ import type { ReactNode } from 'react';
 
 import { AppConfig } from '@/utils/AppConfig';
 
+import ButtonBright from '../components/ButtonBright';
+
 type IMainProps = {
   meta: ReactNode;
   children: ReactNode;
 };
 
 const Main = (props: IMainProps) => (
-  <div className="w-full px-1 text-gray-700 antialiased">
+  <div className="w-full text-white antialiased">
     {props.meta}
 
-    <div className="mx-auto max-w-screen-md">
-      <header className="border-b border-gray-300">
-        <div className="pt-16 pb-8">
-          <h1 className="text-3xl font-bold text-gray-900">
-            {AppConfig.title}
-          </h1>
-          <h4 className="text-xl">{AppConfig.description}</h4>
-        </div>
-        <nav>
-          <ul className="flex flex-wrap text-xl">
-            <li className="mr-6">
+    <div className="mx-auto">
+      <header className="shadow-lg">
+        <nav className="flex justify-between">
+          <div className="my-2 mx-6 h-12 w-12 bg-emerald-400"> </div>
+          <ul className="mx-12 flex flex-wrap content-center text-xl">
+            <li className="mr-6 mt-2 flex">
+              <p className="px-4 text-emerald-400">1.</p>
               <Link
                 href="/"
-                className="border-none text-gray-700 hover:text-gray-900"
-              >
-                Home
-              </Link>
-            </li>
-            <li className="mr-6">
-              <Link
-                href="/about/"
-                className="border-none text-gray-700 hover:text-gray-900"
+                className="border-none text-white hover:text-gray-900"
               >
                 About
               </Link>
             </li>
-            <li className="mr-6">
+            <li className="mr-6 mt-2 flex">
+              <p className="px-4 text-emerald-400">2.</p>
+              <Link
+                href="/about/"
+                className="border-none text-white hover:text-gray-900"
+              >
+                experience
+              </Link>
+            </li>
+            <li className="mr-6 mt-2 flex">
+              <p className="brightText px-4">3.</p>
               <a
-                className="border-none text-gray-700 hover:text-gray-900"
+                className="border-none text-white hover:text-gray-900"
                 href="https://github.com/ixartz/Next-js-Boilerplate"
               >
-                GitHub
+                Work
               </a>
             </li>
-            <li className="mr-6">
+            <li className="mr-6 mt-2 flex">
+              <p className="px-4 text-emerald-400">4.</p>
+
               <Link
                 href="/blog/"
-                className="border-none text-gray-700 hover:text-gray-900"
+                className="border-none text-white hover:text-gray-900"
               >
-                Blog
+                contact
               </Link>
+            </li>
+            <li className="mr-6">
+              <ButtonBright externalURL="https://github.com/" title="resume" />
             </li>
           </ul>
         </nav>

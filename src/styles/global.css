@@ -19,3 +19,15 @@ a:hover {
 .content ul {
   @apply my-6;
 }
+
+body {
+  background: #343E3D;
+}
+
+.text {
+  color: white;
+}
+
+.brightText {
+  color: #38E4AE;
+}
