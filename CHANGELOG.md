@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.1.0...v1.2.0) (2023-03-02)
+
+
+### Features
+
+* **header:** added profile picture to the header ([ebf0ae5](https://github.com/NightTrek/NightTrek-Portfolio/commit/ebf0ae5044772f7759db035615287d8728fd9c9b))
+
 # [1.1.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.0.0...v1.1.0) (2023-03-02)
 
 
