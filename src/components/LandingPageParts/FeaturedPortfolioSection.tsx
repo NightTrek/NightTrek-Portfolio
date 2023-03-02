@@ -11,6 +11,8 @@ type FeatureProps = {
   buttonlink?: string;
   buttonExternalURL?: string;
   githubURL?: string;
+  imgWidth?: number;
+  imgHeight?: number;
 };
 const FeatureCard = (props: FeatureProps) => {
   return (
@@ -20,8 +22,8 @@ const FeatureCard = (props: FeatureProps) => {
           className="min-w-[320px] rounded-lg"
           src={props.imageURL}
           alt={props.name}
-          width={320}
-          height={320}
+          width={props.imgWidth || 320}
+          height={props.imgHeight || 320}
         />
       </div>
       <div className="my-4 flex flex-col content-evenly justify-evenly p-4">
@@ -55,21 +57,35 @@ const FeaturedPortfolioSection = () => {
         </div>
         <FeatureCard
           name={'Dapper Dinos Breeding'}
-          imageURL="/card-137-0x2462Dd404Bc309c597b40A4b58F3A67cE794F312-205.png"
-          description={'A breeding experience for an existing NFT collection'}
+          imageURL="/DapperDinosBreedPagecrop.PNG"
+          description={
+            'A breeding experience for an existing Ethereum NFT collection. Built designed the breeding algorithm and minting service in Go. Built a baby dino rendering service to render the new babies.'
+          }
+          company="Nugbase"
+          buttonTitle="Watch the Video"
+          buttonExternalURL="https://youtu.be/Dd4IP3iU6VY"
+        />
+        <FeatureCard
+          name={'Dapper dino Account Page'}
+          imageURL="/DapperDinosAccountPage.PNG"
+          description={
+            'Built an account system which tracks which Dino NFTs users own. Users can also see which dino eggs they have and hatch them. The account system supports arbitrary key value data to be attached to the account. '
+          }
           company="Nugbase"
           buttonTitle="Watch the Video"
           buttonExternalURL="https://youtu.be/Dd4IP3iU6VY"
         />
         <FeatureCard
           name={'Flowerpatch Item Store'}
-          imageURL="/card-137-0x2462Dd404Bc309c597b40A4b58F3A67cE794F312-205.png"
+          imageURL="/SeedStoreV1.1.PNG"
           description={
             'A new in game store which allowed players to buy in game items for SEED. The in game store used a new smart contract which supports the sale of both FLOWER NFTs and game items.'
           }
           company="Nugbase"
           buttonTitle="Read more"
           buttonlink="/nugbase/#flowerpatch"
+          imgWidth={512}
+          imgHeight={320}
         />
       </div>
     </div>
