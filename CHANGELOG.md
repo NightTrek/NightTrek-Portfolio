@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.0.0...v1.1.0) (2023-03-02)
+
+
+### Features
+
+* contact page and feautre page component ([8f99a5f](https://github.com/NightTrek/NightTrek-Portfolio/commit/8f99a5f79cd144e940744129870f20c02c27af1f))
+* fixed linkages and added new tab for a tags ([75d50c9](https://github.com/NightTrek/NightTrek-Portfolio/commit/75d50c938b08918ba963a7651f37128651b7182a))
+* new nugbase page with webm ([c888d4e](https://github.com/NightTrek/NightTrek-Portfolio/commit/c888d4ee39b847a10eb0128406dc694edc823642))
+
 # 1.0.0 (2023-03-02)
 
 
