@@ -8,7 +8,8 @@ type FeatureProps = {
   description: string;
   company: string;
   buttonTitle: string;
-  buttonlink: string;
+  buttonlink?: string;
+  buttonExternalURL?: string;
   githubURL?: string;
 };
 const FeatureCard = (props: FeatureProps) => {
@@ -30,7 +31,11 @@ const FeatureCard = (props: FeatureProps) => {
         </div>
         <div className="text-slate-400">{props.description}</div>
         <div className="flex justify-end">
-          <ButtonBright title={props.buttonTitle} link={props.buttonlink} />
+          <ButtonBright
+            title={props.buttonTitle}
+            link={props.buttonlink || ''}
+            externalURL={props.buttonExternalURL || ''}
+          />
         </div>
       </div>
     </div>
@@ -54,7 +59,7 @@ const FeaturedPortfolioSection = () => {
           description={'A breeding experience for an existing NFT collection'}
           company="Nugbase"
           buttonTitle="Watch the Video"
-          buttonlink="/nugbase/#dapperdino"
+          buttonExternalURL="https://youtu.be/Dd4IP3iU6VY"
         />
         <FeatureCard
           name={'Flowerpatch Item Store'}

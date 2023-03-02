@@ -27,6 +27,7 @@ const ButtonBright = (props: ButtonProps) => {
       <a
         href={props.externalURL}
         title={props.title}
+        target="_blank"
         className="group flex w-fit flex-nowrap rounded border-2 border-default-500 px-3 py-1 hover:border-default-500 hover:bg-default-500"
       >
         <div className="text-default-500 group-hover:text-gray-100">

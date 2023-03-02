@@ -62,7 +62,7 @@ const Main = (props: IMainProps) => {
               </li>
               <li className="mr-6">
                 <ButtonBright
-                  externalURL="https://github.com/"
+                  externalURL="https://firebasestorage.googleapis.com/v0/b/nighttrek-web3-portfolio.appspot.com/o/Daniel_Steigman_Resume_2023.pdf?alt=media&token=cd62dfba-e3fc-4f68-a3cd-e913cc1ef834"
                   title="resume"
                 />
               </li>
@@ -126,7 +126,7 @@ const Main = (props: IMainProps) => {
                 </li>
                 <li className="my-6 mr-6 flex justify-center">
                   <ButtonBright
-                    externalURL="https://github.com/"
+                    externalURL="https://firebasestorage.googleapis.com/v0/b/nighttrek-web3-portfolio.appspot.com/o/Daniel_Steigman_Resume_2023.pdf?alt=media&token=cd62dfba-e3fc-4f68-a3cd-e913cc1ef834"
                     title="resume"
                   />
                 </li>
