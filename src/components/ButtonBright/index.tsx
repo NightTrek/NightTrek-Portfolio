@@ -10,24 +10,24 @@ type ButtonProps = {
 };
 
 const ButtonBright = (props: ButtonProps) => {
-  if (props.link)
+  if (props.link && props.link !== '')
     return (
       <Link
         href={props.link}
         title={props.title}
-        className="group flex flex-nowrap rounded border-2 border-emerald-400 px-3 py-1 hover:border-emerald-400 hover:bg-emerald-400"
+        className="group flex w-fit flex-nowrap rounded border-2 border-emerald-400 px-3 py-1 hover:border-emerald-400 hover:bg-emerald-400"
       >
         <div className="text-emerald-400 group-hover:text-gray-100">
           {props.title}
         </div>
       </Link>
     );
-  if (props.externalURL)
+  if (props.externalURL && props.externalURL !== '')
     return (
       <a
         href={props.externalURL}
         title={props.title}
-        className="group flex flex-nowrap rounded border-2 border-emerald-400 px-3 py-1 hover:border-emerald-400 hover:bg-emerald-400"
+        className="group flex w-fit flex-nowrap rounded border-2 border-emerald-400 px-3 py-1 hover:border-emerald-400 hover:bg-emerald-400"
       >
         <div className="text-emerald-400 group-hover:text-gray-100">
           {props.title}
@@ -37,7 +37,7 @@ const ButtonBright = (props: ButtonProps) => {
   return (
     <div
       onClick={props.onClick}
-      className="group flex flex-nowrap rounded border-2 border-emerald-400 px-3 py-1 hover:border-emerald-400 hover:bg-emerald-400"
+      className="group flex w-fit flex-nowrap rounded border-2 border-emerald-400 px-3 py-1 hover:border-emerald-400 hover:bg-emerald-400"
     >
       <div className="text-emerald-400 group-hover:text-gray-100">
         {props.title}

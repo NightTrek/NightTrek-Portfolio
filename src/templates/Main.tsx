@@ -18,11 +18,11 @@ const Main = (props: IMainProps) => (
       <header className="shadow-lg">
         <nav className="flex justify-between">
           <div className="my-2 mx-6 h-12 w-12 bg-emerald-400"> </div>
-          <ul className="mx-12 flex flex-wrap content-center text-xl">
+          <ul className="mx-12 flex flex-wrap content-center text-base">
             <li className="mr-6 mt-2 flex">
               <p className="px-4 text-emerald-400">1.</p>
               <Link
-                href="/"
+                href="/#about"
                 className="border-none text-white hover:text-gray-900"
               >
                 About
