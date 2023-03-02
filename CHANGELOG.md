@@ -1,3 +1,10 @@
+# 1.0.0 (2023-03-02)
+
+
+### Features
+
+* added a about me and experience section without mobile optimization ([b3df45e](https://github.com/NightTrek/NightTrek-Portfolio/commit/b3df45eab406d2a74a15339684a1cddf7289f979))
+
 # [3.7.0](https://github.com/ixartz/Next-js-Boilerplate/compare/v3.6.0...v3.7.0) (2023-02-05)
 
 
