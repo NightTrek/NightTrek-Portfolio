@@ -21,7 +21,17 @@ const Main = (props: IMainProps) => {
       <div className="mx-auto">
         <header className="shadow-lg">
           <nav className="flex justify-between">
-            <div className="my-2 mx-6 h-12 w-12 bg-default-500"> </div>
+            <Link
+              className="my-2 mx-6 h-12 w-12 hover:border-0 hover:brightness-125		"
+              href="/"
+            >
+              <Image
+                src="/NightTrekLogo.svg"
+                alt="Nighttrek logo"
+                width="128"
+                height="128"
+              />{' '}
+            </Link>
             <ul className="mx-12 hidden flex-wrap content-center text-base sm:flex">
               <li className="mr-6 mt-2 flex">
                 <p className="px-4 text-default-500">1.</p>
