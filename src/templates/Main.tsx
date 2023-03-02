@@ -1,5 +1,7 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
+import React from 'react';
 
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -10,73 +12,150 @@ type IMainProps = {
   children: ReactNode;
 };
 
-const Main = (props: IMainProps) => (
-  <div className="w-full text-white antialiased">
-    {props.meta}
+const Main = (props: IMainProps) => {
+  const [menu, setMenu] = React.useState(false);
+  return (
+    <div className="w-full text-white antialiased">
+      {props.meta}
 
-    <div className="mx-auto">
-      <header className="shadow-lg">
-        <nav className="flex justify-between">
-          <div className="my-2 mx-6 h-12 w-12 bg-emerald-400"> </div>
-          <ul className="mx-12 flex flex-wrap content-center text-base">
-            <li className="mr-6 mt-2 flex">
-              <p className="px-4 text-emerald-400">1.</p>
-              <Link
-                href="/#about"
-                className="border-none text-white hover:text-gray-900"
-              >
-                About
-              </Link>
-            </li>
-            <li className="mr-6 mt-2 flex">
-              <p className="px-4 text-emerald-400">2.</p>
-              <Link
-                href="/about/"
-                className="border-none text-white hover:text-gray-900"
-              >
-                experience
-              </Link>
-            </li>
-            <li className="mr-6 mt-2 flex">
-              <p className="brightText px-4">3.</p>
-              <a
-                className="border-none text-white hover:text-gray-900"
-                href="https://github.com/ixartz/Next-js-Boilerplate"
-              >
-                Work
-              </a>
-            </li>
-            <li className="mr-6 mt-2 flex">
-              <p className="px-4 text-emerald-400">4.</p>
+      <div className="mx-auto">
+        <header className="shadow-lg">
+          <nav className="flex justify-between">
+            <div className="my-2 mx-6 h-12 w-12 bg-default-500"> </div>
+            <ul className="mx-12 hidden flex-wrap content-center text-base sm:flex">
+              <li className="mr-6 mt-2 flex">
+                <p className="px-4 text-default-500">1.</p>
+                <Link
+                  href="/#about"
+                  className="border-none text-white hover:text-gray-900"
+                >
+                  About
+                </Link>
+              </li>
+              <li className="mr-6 mt-2 flex">
+                <p className="px-4 text-default-500">2.</p>
+                <Link
+                  href="/#experience"
+                  className="border-none text-white hover:text-gray-900"
+                >
+                  experience
+                </Link>
+              </li>
+              <li className="mr-6 mt-2 flex">
+                <p className="brightText px-4">3.</p>
+                <Link
+                  href="/#work"
+                  className="border-none text-white hover:text-gray-900"
+                >
+                  Portfolio
+                </Link>
+              </li>
+              <li className="mr-6 mt-2 flex">
+                <p className="px-4 text-default-500">4.</p>
 
-              <Link
-                href="/blog/"
-                className="border-none text-white hover:text-gray-900"
+                <Link
+                  href="/#contact"
+                  className="border-none text-white hover:text-gray-900"
+                >
+                  contact
+                </Link>
+              </li>
+              <li className="mr-6">
+                <ButtonBright
+                  externalURL="https://github.com/"
+                  title="resume"
+                />
+              </li>
+            </ul>
+            <div className="mx-12 flex flex-col content-center sm:hidden">
+              <div
+                className="my-2 h-12 w-12 font-bold hover:bg-red-300"
+                onClick={() => {
+                  setMenu(!menu);
+                }}
               >
-                contact
-              </Link>
-            </li>
-            <li className="mr-6">
-              <ButtonBright externalURL="https://github.com/" title="resume" />
-            </li>
-          </ul>
-        </nav>
-      </header>
+                <Image
+                  src="/menu.svg"
+                  alt="Menu"
+                  height={48}
+                  width={48}
+                  // className="animate-spin"
+                />
+              </div>
+            </div>
+          </nav>
+          <nav className="flex flex-nowrap content-center justify-center sm:hidden">
+            {menu && (
+              <ul className="mx-12 flex flex-col content-center justify-evenly text-base">
+                <li className="mr-6 mt-2 flex">
+                  <p className="px-4 text-default-500">1.</p>
+                  <Link
+                    href="/#about"
+                    className="border-none text-white hover:text-gray-900"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li className="mr-6 mt-2 flex">
+                  <p className="px-4 text-default-500">2.</p>
+                  <Link
+                    href="/#experience"
+                    className="border-none text-white hover:text-gray-900"
+                  >
+                    experience
+                  </Link>
+                </li>
+                <li className="mr-6 mt-2 flex">
+                  <p className="brightText px-4">3.</p>
+                  <Link
+                    href="/#work"
+                    className="border-none text-white hover:text-gray-900"
+                  >
+                    Portfolio
+                  </Link>
+                </li>
+                <li className="mr-6 mt-2 flex">
+                  <p className="px-4 text-default-500">4.</p>
 
-      <main className="content py-5 text-xl">{props.children}</main>
+                  <Link
+                    href="/#contact"
+                    className="border-none text-white hover:text-gray-900"
+                  >
+                    contact
+                  </Link>
+                </li>
+                <li className="my-6 mr-6 flex justify-center">
+                  <ButtonBright
+                    externalURL="https://github.com/"
+                    title="resume"
+                  />
+                </li>
+              </ul>
+            )}
+          </nav>
+        </header>
 
-      <footer className="border-t border-gray-300 py-8 text-center text-sm">
-        © Copyright {new Date().getFullYear()} {AppConfig.title}. Made with{' '}
-        <a href="https://creativedesignsguru.com">CreativeDesignsGuru</a>.
-        {/*
-         * PLEASE READ THIS SECTION
-         * I'm an indie maker with limited resources and funds, I'll really appreciate if you could have a link to my website.
-         * The link doesn't need to appear on every pages, one link on one page is enough.
-         * For example, in the `About` page. Thank you for your support, it'll mean a lot to me.
-         */}
-      </footer>
+        <main className="content py-5 text-xl">{props.children}</main>
+
+        <footer className=" py-8 text-center text-sm text-slate-400">
+          © Copyright {new Date().getFullYear()} {AppConfig.title}. Made with{' '}
+          <a
+            className="text-default-500"
+            href="https://github.com/ixartz/Next-js-Boilerplate"
+          >
+            {`@ixartz  Next-js-Boilerplate`}
+          </a>
+          .
+          {/*
+           * PLEASE READ THIS SECTION
+           * I'm an indie maker with limited resources and funds, I'll really appreciate if you could have a link to my website.
+           * The link doesn't need to appear on every pages, one link on one page is enough.
+           * For example, in the `About` page. Thank you for your support, it'll mean a lot to me.
+           */}
+        </footer>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export { Main };

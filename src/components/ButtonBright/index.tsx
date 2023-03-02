@@ -15,9 +15,9 @@ const ButtonBright = (props: ButtonProps) => {
       <Link
         href={props.link}
         title={props.title}
-        className="group flex w-fit flex-nowrap rounded border-2 border-emerald-400 px-3 py-1 hover:border-emerald-400 hover:bg-emerald-400"
+        className="group flex w-fit flex-nowrap rounded border-2 border-default-500 px-3 py-1 hover:border-default-500 hover:bg-default-500"
       >
-        <div className="text-emerald-400 group-hover:text-gray-100">
+        <div className="text-default-500 group-hover:text-gray-100">
           {props.title}
         </div>
       </Link>
@@ -27,9 +27,9 @@ const ButtonBright = (props: ButtonProps) => {
       <a
         href={props.externalURL}
         title={props.title}
-        className="group flex w-fit flex-nowrap rounded border-2 border-emerald-400 px-3 py-1 hover:border-emerald-400 hover:bg-emerald-400"
+        className="group flex w-fit flex-nowrap rounded border-2 border-default-500 px-3 py-1 hover:border-default-500 hover:bg-default-500"
       >
-        <div className="text-emerald-400 group-hover:text-gray-100">
+        <div className="text-default-500 group-hover:text-gray-100">
           {props.title}
         </div>
       </a>
@@ -37,9 +37,9 @@ const ButtonBright = (props: ButtonProps) => {
   return (
     <div
       onClick={props.onClick}
-      className="group flex w-fit flex-nowrap rounded border-2 border-emerald-400 px-3 py-1 hover:border-emerald-400 hover:bg-emerald-400"
+      className="group flex w-fit flex-nowrap rounded border-2 border-default-500 px-3 py-1 hover:border-default-500 hover:bg-default-500"
     >
-      <div className="text-emerald-400 group-hover:text-gray-100">
+      <div className="text-default-500 group-hover:text-gray-100">
         {props.title}
       </div>
     </div>
