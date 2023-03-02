@@ -15,6 +15,10 @@ module.exports = {
       '6xl': '6rem',
     },
     extend: {
+      backgroundImage: {
+        'fp-background': "url('/flowerpatch-home-bg.jpg')",
+        // 'footer-texture': "url('/img/footer-texture.png')",
+      },
       colors: {
         gray: {
           100: '#f7fafc',
