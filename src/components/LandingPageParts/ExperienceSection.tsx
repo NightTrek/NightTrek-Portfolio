@@ -22,35 +22,35 @@ const Experience: ExperienceJson = {
     title: 'Software Engineer / Cofounder',
     dates: 'April 2018 - February 2023',
     description:
-      'Cofounded Nugbase to build the future of blockchain experiences in gaming.',
+      'Cofounded Nugbase to build the future of blockchain experiences in gaming',
     bullet: [
-      'Lead developer building the Dapper Dino Dapp breeding experience and web app.',
-      'Implemented new login technology and web3 signin, including redux web3 state system.',
-      'Wrote Solidity contracts for market page and ERC1155 support for Redeemable.app.',
+      'Lead developer building the Dapper Dino dapp breeding experience and web app',
+      'Implemented new login technology and Web3 signin, including Redux Web3 state system',
+      'Wrote Solidity contracts for market page and ERC1155 support for Redeemable.app',
     ],
     link: '/nugbase',
   },
   Agromation: {
     company: 'Agromation',
     title: 'Software Engineer',
-    dates: 'September 2019 - june 2021',
+    dates: 'September 2019 - June 2021',
     description: '',
     bullet: [
-      'Built a react web application to view and control remote senors.',
-      'Implemented custom linux firmware to read sensor data of Siemens PLC.',
-      'Implemented custom live data ingestion service which connected live data to the app through a custom VPN.',
+      'Built a React web application to view and control remote senors',
+      'Implemented custom Linux firmware to read sensor data of Siemens PLC',
+      'Implemented custom live data ingestion service that connected live data to the app through a custom VPN',
     ],
     link: '/agromation',
   },
   BHOGART: {
     company: 'BHOGART',
     title: 'Director of Innovation',
-    dates: ' june 2014 - January 2019',
+    dates: ' June 2014 - January 2019',
     description: '',
     bullet: [
-      'Sales and technical support for hydrocarbon extraction systems including an educational class and staff training.',
-      'Design and implementation of innovative Operating procedures and systems design includng manufacturing.',
-      'Marketing and web development including point of sales systems and community outreach progams such as conerences and events.',
+      'Sales and technical support for hydrocarbon extraction systems, including an educational class and staff training',
+      'Design and implementation of innovative operating procedures and systems design, includng manufacturing',
+      'Marketing and web development, including point of sales systems and community outreach progams such as conferences and events',
     ],
     link: '/bhogart',
   },
@@ -130,10 +130,13 @@ const ExperienceSection = () => {
                 </li>
               ))}
             </ul>
-            <ButtonBright
-              title={`Read more about ${getExperienceKey(focus).company}`}
-              link={getExperienceKey(focus).link}
-            />
+            {getExperienceKey(focus).company !== 'BHOGART' &&
+              getExperienceKey(focus).company !== 'Agromation' && (
+                <ButtonBright
+                  title={`Read more about ${getExperienceKey(focus).company}`}
+                  link={getExperienceKey(focus).link}
+                />
+              )}
           </div>
         </div>
       </div>

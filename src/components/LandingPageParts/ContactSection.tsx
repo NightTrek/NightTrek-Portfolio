@@ -11,16 +11,16 @@ const ContactSection = () => {
       <div className="flex w-full max-w-2xl flex-col content-between justify-start py-20 px-6 text-base">
         <div className="text-2xl font-bold text-slate-400">
           <span className="font-normal text-default-500">4. {` `}</span>
-          Contact me
+          Contact Me
         </div>
         <div className="text-slate-400">
-          I am activly interviewing at roles in{' '}
+          I am activly interviewing for roles in{' '}
           <span className="font-normal text-default-500">San Francisco.</span> I
           am open to{' '}
           <span className="font-normal text-default-500">hybrid</span> or{' '}
           <span className="font-normal text-default-500">remote </span>
-          work opportunities. If you think I would be a good fit for your role
-          set some time up to chat.
+          work opportunities. If you think I would be a good fit for company
+          please set some time up to chat.
         </div>
         <div className="my-10 flex justify-evenly">
           <ButtonBright
@@ -31,6 +31,7 @@ const ContactSection = () => {
         <div className="my-20 flex flex-wrap content-center justify-between">
           <a
             className="hover:border-default-500"
+            target="_blank"
             href="https://github.com/NightTrek"
           >
             <Image
@@ -43,6 +44,7 @@ const ContactSection = () => {
           </a>
           <a
             className="hover:border-default-500"
+            target="_blank"
             href="https://discordapp.com/users/367142350151090177"
           >
             <Image
@@ -55,7 +57,8 @@ const ContactSection = () => {
           </a>
           <a
             className="hover:border-default-500"
-            href="https://github.com/NightTrek"
+            target="_blank"
+            href="https://www.linkedin.com/in/nighttrek/"
           >
             <Image
               className="p-1"

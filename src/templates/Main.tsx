@@ -48,7 +48,7 @@ const Main = (props: IMainProps) => {
                   href="/#experience"
                   className="border-none text-white hover:text-gray-900"
                 >
-                  experience
+                  Experience
                 </Link>
               </li>
               <li className="mr-6 mt-2 flex">
@@ -67,13 +67,13 @@ const Main = (props: IMainProps) => {
                   href="/#contact"
                   className="border-none text-white hover:text-gray-900"
                 >
-                  contact
+                  Contact
                 </Link>
               </li>
               <li className="mr-6">
                 <ButtonBright
                   externalURL="https://firebasestorage.googleapis.com/v0/b/nighttrek-web3-portfolio.appspot.com/o/Daniel_Steigman_Resume_2023.pdf?alt=media&token=cd62dfba-e3fc-4f68-a3cd-e913cc1ef834"
-                  title="resume"
+                  title="Resume"
                 />
               </li>
             </ul>
@@ -112,7 +112,7 @@ const Main = (props: IMainProps) => {
                     href="/#experience"
                     className="border-none text-white hover:text-gray-900"
                   >
-                    experience
+                    Experience
                   </Link>
                 </li>
                 <li className="mr-6 mt-2 flex">
@@ -131,13 +131,13 @@ const Main = (props: IMainProps) => {
                     href="/#contact"
                     className="border-none text-white hover:text-gray-900"
                   >
-                    contact
+                    Contact
                   </Link>
                 </li>
                 <li className="my-6 mr-6 flex justify-center">
                   <ButtonBright
                     externalURL="https://firebasestorage.googleapis.com/v0/b/nighttrek-web3-portfolio.appspot.com/o/Daniel_Steigman_Resume_2023.pdf?alt=media&token=cd62dfba-e3fc-4f68-a3cd-e913cc1ef834"
-                    title="resume"
+                    title="Resume"
                   />
                 </li>
               </ul>

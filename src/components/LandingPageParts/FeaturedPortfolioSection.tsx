@@ -53,33 +53,33 @@ const FeaturedPortfolioSection = () => {
       <div className="flex w-full max-w-4xl flex-col content-between justify-start text-base">
         <div className="px-2 text-2xl font-bold text-slate-400">
           <span className="font-normal text-default-500">3. {` `}</span>
-          Some featured work
+          Some Featured Work
         </div>
         <FeatureCard
           name={'Dapper Dinos Breeding'}
           imageURL="/DapperDinosBreedPagecrop.PNG"
           description={
-            'A breeding experience for an existing Ethereum NFT collection. Built designed the breeding algorithm and minting service in Go. Built a baby dino rendering service to render the new babies.'
+            'Created a breeding experience for an existing Ethereum NFT collection. Designed the breeding algorithm and minting service in Go. Built a Baby Dino rendering service to render the new babies.'
           }
           company="Nugbase"
           buttonTitle="Watch the Video"
           buttonExternalURL="https://youtu.be/Dd4IP3iU6VY"
         />
         <FeatureCard
-          name={'Dapper dino Account Page'}
+          name={'Dapper Dino Account Page'}
           imageURL="/DapperDinosAccountPage.PNG"
           description={
-            'Built an account system which tracks which Dino NFTs users own. Users can also see which dino eggs they have and hatch them. The account system supports arbitrary key value data to be attached to the account. '
+            'Implemented an account system that tracks which Dino NFTs users own. Users can also see which Dino eggs they have and hatch them. The account system supports arbitrary key value data to be attached to the account. '
           }
           company="Nugbase"
           buttonTitle="Watch the Video"
           buttonExternalURL="https://youtu.be/Dd4IP3iU6VY"
         />
         <FeatureCard
-          name={'Flowerpatch Item Store'}
+          name={'Flowerpatch Seed Store'}
           imageURL="/SeedStoreV1.1.PNG"
           description={
-            'A new in game store which allowed players to buy in game items for SEED. The in game store used a new smart contract which supports the sale of both FLOWER NFTs and game items.'
+            'Implemented a new in-game store that allows players to buy items with SEED tokens. The Seed Store uses a new smart contract that supports the sale of both FLOWER NFTs and game items.'
           }
           company="Nugbase"
           buttonTitle="Read more"
