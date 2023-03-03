@@ -1,3 +1,13 @@
+# [1.3.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.2.0...v1.3.0) (2023-03-03)
+
+
+### Features
+
+* added flowerpatch top the nugbase page ([8b9f20d](https://github.com/NightTrek/NightTrek-Portfolio/commit/8b9f20d24fca734b85af4fb9ab78aa24f2d5be34))
+* full nugbase mobile version with FP ([8f385cb](https://github.com/NightTrek/NightTrek-Portfolio/commit/8f385cb7e884e545e4393cf21b0fbde38a2d504d))
+* mobile optimization ([45eb9b1](https://github.com/NightTrek/NightTrek-Portfolio/commit/45eb9b1f32384b6c74ce0ccb1b2947d2cd19b17a))
+* updated the featured work sections ([3213c3f](https://github.com/NightTrek/NightTrek-Portfolio/commit/3213c3f84d7904aa77b59645f45c57c07ed64d61))
+
 # [1.2.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.1.0...v1.2.0) (2023-03-02)
 
 
