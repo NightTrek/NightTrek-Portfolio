@@ -16,8 +16,8 @@ type FeatureProps = {
 };
 const FeatureCard = (props: FeatureProps) => {
   return (
-    <div className="my-12 flex h-96 w-[100%] flex-wrap content-evenly justify-start rounded-3xl bg-gradient-to-t from-default-100 to-default-200 shadow-lg sm:flex-nowrap">
-      <div className="m-4 rounded-lg px-2">
+    <div className="my-12 flex h-auto w-[100%] flex-wrap content-evenly justify-start rounded-3xl bg-gradient-to-t from-default-100 to-default-200 shadow-lg sm:h-96 sm:flex-nowrap">
+      <div className="m-4 flex w-full justify-center rounded-lg px-2">
         <Image
           className="min-w-[320px] rounded-lg"
           src={props.imageURL}
@@ -51,7 +51,7 @@ const FeaturedPortfolioSection = () => {
       id={'work'}
     >
       <div className="flex w-full max-w-4xl flex-col content-between justify-start text-base">
-        <div className="text-2xl font-bold text-slate-400">
+        <div className="px-2 text-2xl font-bold text-slate-400">
           <span className="font-normal text-default-500">3. {` `}</span>
           Some featured work
         </div>

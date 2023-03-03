@@ -84,7 +84,7 @@ const ExperienceSection = () => {
           <span className="font-normal text-default-500">2. {` `}</span>
           Work Experience
         </div>
-        <div className="mt-8 flex w-full flex-nowrap justify-between">
+        <div className="mt-8 flex w-full flex-wrap justify-between sm:flex-nowrap">
           <div className="flex flex-col justify-start">
             {Object.keys(Experience).map((experience, index): ReactNode => {
               // if the selected is the current focus
