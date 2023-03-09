@@ -29,7 +29,7 @@ const Nugbase = () => (
         </div>
       </div>
     </div>
-    <div className="h-120 my-10 flex w-full content-center justify-evenly bg-purple-700 py-20 sm:h-96 sm:bg-fp-background">
+    <div className="my-10 flex w-full content-center justify-evenly bg-purple-700 py-20 sm:h-96 sm:bg-fp-background">
       <div className="w-full max-w-2xl flex-col">
         <div className="flex px-2 font-bold text-white">Flowerpatch</div>
         <div className="my-10 mx-2 flex w-full flex-col justify-between">

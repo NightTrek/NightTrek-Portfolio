@@ -15,7 +15,7 @@ const ButtonBright = (props: ButtonProps) => {
       <Link
         href={props.link}
         title={props.title}
-        className="group flex w-fit flex-nowrap rounded border-2 border-default-500 px-3 py-1 hover:border-default-500 hover:bg-default-500"
+        className="group flex w-fit cursor-pointer flex-nowrap rounded border-2 border-default-500 px-3 py-1 hover:border-default-500 hover:bg-default-500"
       >
         <div className="text-default-500 group-hover:text-gray-100">
           {props.title}
@@ -28,7 +28,7 @@ const ButtonBright = (props: ButtonProps) => {
         href={props.externalURL}
         title={props.title}
         target="_blank"
-        className="group flex w-fit flex-nowrap rounded border-2 border-default-500 px-3 py-1 hover:border-default-500 hover:bg-default-500"
+        className="group flex w-fit cursor-pointer flex-nowrap rounded border-2 border-default-500 px-3 py-1 hover:border-default-500 hover:bg-default-500"
       >
         <div className="text-default-500 group-hover:text-gray-100">
           {props.title}
@@ -38,7 +38,7 @@ const ButtonBright = (props: ButtonProps) => {
   return (
     <div
       onClick={props.onClick}
-      className="group flex w-fit flex-nowrap rounded border-2 border-default-500 px-3 py-1 hover:border-default-500 hover:bg-default-500"
+      className="group flex w-fit cursor-pointer flex-nowrap rounded border-2 border-default-500 px-3 py-1 hover:border-default-500 hover:bg-default-500"
     >
       <div className="text-default-500 group-hover:text-gray-100">
         {props.title}
