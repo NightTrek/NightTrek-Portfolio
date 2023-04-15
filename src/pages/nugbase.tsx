@@ -65,7 +65,7 @@ const Nugbase = () => (
                     <div className="flex w-full justify-end px-4">
                         <ButtonBright
                             externalURL="https://flowerpatch.app"
-                            title="Try the game"
+                            title="Try our game"
                         />
                     </div>
                 </div>
