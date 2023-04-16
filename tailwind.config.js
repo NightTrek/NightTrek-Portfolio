@@ -15,9 +15,13 @@ module.exports = {
       '6xl': '6rem',
     },
     extend: {
+      screens: {
+        short: { raw: '(max-height: 800px)' },
+        xshort: { raw: '(max-height: 700px)' },
+      },
       backgroundImage: {
         'fp-background': "url('/flowerpatch-home-bg.jpg')",
-        // 'footer-texture': "url('/img/footer-texture.png')",
+        'hero-texture': "url('/hexagonFooter.svg')",
       },
       colors: {
         gray: {

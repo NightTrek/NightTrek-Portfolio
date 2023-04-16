@@ -19,7 +19,7 @@ const Main = (props: IMainProps) => {
       {props.meta}
 
       <div className="mx-auto">
-        <header className="shadow-lg">
+        <header className=" shadow-lg">
           <nav className="flex justify-between">
             <Link
               className="my-2 mx-6 h-12 w-12 hover:border-0 hover:brightness-125		"
@@ -144,8 +144,12 @@ const Main = (props: IMainProps) => {
             )}
           </nav>
         </header>
-
-        <main className="content py-5 text-xl">{props.children}</main>
+        <div className="relative">
+          <div className="absolute top-0 z-0 h-full w-full rotate-180 bg-hero-texture bg-contain bg-bottom bg-repeat-x md:h-1/6	" />
+          <main className="content py-5 text-xl short:py-12 xshort:py-24">
+            {props.children}
+          </main>
+        </div>
 
         <footer className=" py-8 text-center text-sm text-slate-400">
           © Copyright {new Date().getFullYear()} {AppConfig.title}. Made with{' '}

@@ -10,8 +10,10 @@ import { Main } from '@/templates/Main';
 
 const Hero = () => {
   return (
-    <div className="flex h-screen flex-col items-center justify-center">
-      <div className=" w-full max-w-3xl  flex-col content-between justify-start	">
+    <div className="relative flex h-screen flex-col items-center justify-center ">
+      {/* <video muted autoPlay loop className="absolute z-0 w-full h-full" src=''> */}
+
+      <div className=" w-full max-w-3xl  flex-col content-between justify-start ">
         <h4 className=" px-2 text-lg text-default-500">Hello, my name is</h4>
         <h2 className=" px-2 font-bold" style={{ fontSize: '64px' }}>
           Daniel Steigman.
