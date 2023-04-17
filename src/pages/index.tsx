@@ -23,10 +23,9 @@ const Hero = () => {
           <span className=" text-default-500">Web3</span> revolution.
         </div>
         <div className="px-2 text-base text-slate-400">
-          Software engineering is a passion that allows me to bring new people
-          into the world of Web3. Being a startup founder requires a high level
-          of software competency AND the ability to engage new people and new
-          ideas.
+          I traveled the world helping buisnesses implement innovative solutions
+          for their problems. After running a Web3 startup for 4 years I am
+          activly looking for new opportunities to build the future of web3.
         </div>
         <div className="my-8 flex px-2 text-lg">
           <ButtonBright title="Read about my work at Nugbase" link="/nugbase" />

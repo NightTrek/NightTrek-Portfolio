@@ -1,4 +1,4 @@
-import ButtonBright from '@/components/ButtonBright';
+import ButtonBright, { ButtonStyles } from '@/components/ButtonBright';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
@@ -22,14 +22,14 @@ const Nugbase = () => (
         <div className="my-10 mx-2 flex w-full flex-col-reverse flex-wrap justify-between sm:flex-row sm:flex-nowrap">
           <div className="my-4 text-lg text-slate-400">
             Nugbase is a web3 software company building blockchain experiences
-            from scratch. Founded in 2018 the team began work on flowerpatch an
+            from scratch. Founded in 2018 the team began work on flowerpatch a
             multiplayer NFT farming game. Nugbase specializes in the building
             games using state of the art NFT technology. At the time there was
             no blockchain infrastructure providers and the team had to build
-            everything from scratch. The team build automated Transaction
-            processing services, Custom NFT smart contracts, and an Indexing
-            service to track NFT ownership. Nugbases technical expertise has
-            since been used to power many other blockchain projects.
+            everything from scratch. Everything from custom smart contracts to
+            automated transaction and indexing services. Nugbases technical
+            expertise has since been used to power many other blockchain
+            projects.
           </div>
           <video src="/island.webm" autoPlay muted loop width={320} />
         </div>
@@ -60,6 +60,7 @@ const Nugbase = () => (
             <ButtonBright
               externalURL="https://flowerpatch.app"
               title="Try our game"
+              style={ButtonStyles.FLOWERPATCH}
             />
           </div>
         </div>
