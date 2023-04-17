@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import ButtonBright, { ButtonStyles } from '@/components/ButtonBright';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
@@ -21,15 +22,16 @@ const Nugbase = () => (
         </div>
         <div className="my-10 mx-2 flex w-full flex-col-reverse flex-wrap justify-between sm:flex-row sm:flex-nowrap">
           <div className="my-4 text-lg text-slate-400">
-            Nugbase is a web3 software company building blockchain experiences
-            from scratch. Founded in 2018 the team began work on flowerpatch a
-            multiplayer NFT farming game. Nugbase specializes in the building
-            games using state of the art NFT technology. At the time there was
+            I co-founded nugbabase in 2018 with some friends who shared a
+            passion for blockchain. Nugbase is a Web3 software company building
+            blockchain experiences from scratch. Nugbase specializes in building
+            games using state of the art NFT technology. Our teams first built
+            Flowerpatch, a multiplayer NFT farming game. At the time there were
             no blockchain infrastructure providers and the team had to build
-            everything from scratch. Everything from custom smart contracts to
-            automated transaction and indexing services. Nugbases technical
-            expertise has since been used to power many other blockchain
-            projects.
+            everything from scratch. We implemented everything from custom smart
+            contracts to automated transaction and indexing services. Nugbase's
+            technical expertise has since been used to power many other
+            blockchain projects.
           </div>
           <video src="/island.webm" autoPlay muted loop width={320} />
         </div>
@@ -48,12 +50,12 @@ const Nugbase = () => (
             </p>
             <p className="px-2">
               Flowerpatch launched in early 2018 on ethereum and grew to over
-              20,000 NFTs. Over 80% of the NFTs on ethereum were from users
-              breeding on the platform. The gas costs on ethereum drove the
-              project multi-chain, and the project was deployed on polygon.
-              Flowerpatch was the 5th NFT project on the Polygon OpenSea store
-              and one of the largest Collections on polygon with over 150,000
-              FLOWERs on polygon alone.
+              20,000 FLOWER NFTs. Over 80% of the NFTs on Ethereum were from
+              users breeding on the platform. High gas costs on Ethereum drove
+              the project multi-chain, and we deployed the FLOWER NFT smart
+              contract on Polygon. Flowerpatch was the 5th NFT project on the
+              Polygon OpenSea store, where it became one of the largest
+              Collections with over 150,000 FLOWER NFTs.
             </p>
           </div>
           <div className="flex w-full justify-end px-4">

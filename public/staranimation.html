@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  body {
+    margin: 0;
+    background: #343e3d;
+    min-width: 960px;
+  }
+</style>
+
+<body>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script>
+
+    function getCoordinates(elapsedTime) {
+      
+      const radius = 512;
+      const centerX = 512;
+      const centerY = 512;
+      const speed = 0.008;
+
+      const x = centerX + radius * Math.cos(speed * elapsedTime);
+      const y = centerY + radius * Math.sin(speed * elapsedTime);
+
+      return { x, y };
+    }
+
+    function spirograph(elapsedTime) {
+  const R = 100; // radius of the fixed circle
+  const r = 50; // radius of the moving circle
+  const d = 70; // distance of the pen from the center of the moving circle
+  const a = 0.5; // angle of rotation of the moving circle in radians per frame
+
+  const t = (elapsedTime / 1000) * a;
+  let x =
+    (R - r) * Math.cos(t) + d * Math.cos(((R - r) / r) * t + Math.PI / 2);
+  let y =
+    (R - r) * Math.sin(t) - d * Math.sin(((R - r) / r) * t + Math.PI / 2);
+      // console.log(x,y)
+      x += 512;
+      y += 512;
+  return { x, y };
+}
+
+
+    var width = Math.max(960, innerWidth),
+      height = Math.max(960, innerHeight);
+
+    var x1 = width / 2,
+      y1 = height / 2,
+      x0 = x1,
+      y0 = y1,
+      i = 0,
+      radius = 100, // radius of the particles
+      τ = 2 * Math.PI; // value for the circumfrence of a circle 1 will create a half circle
+
+    var canvas = d3.select("body").append("canvas")
+      .attr("width", width)
+      .attr("height", height)
+    // .on("ontouchstart" in document ? "touchmove" : "mousemove", move);
+
+    var context = canvas.node().getContext("2d");
+    context.globalCompositeOperation = "lighter";
+    context.lineWidth = 2;
+
+    d3.timer(function (elapsed) {
+      context.clearRect(0, 0, width, height);
+
+      var z = d3.hsl(++i % 360, 1, 0.5).rgb(),
+        c = "rgba(" + z.r + "," + z.g + "," + z.b + ",",
+        // c = "rgba(52,211,153,",
+        x = x0 += (x1 - x0) * .1,
+        y = y0 += (y1 - y0) * .1;
+
+        d3.select({}).transition()
+        .duration(50000)
+        .ease(Math.sqrt)
+        .tween("circle", function () {
+          return function (t) {
+            context.strokeStyle = c + (1 - t) + ")";
+            context.beginPath();
+            context.arc(x, y, radius * t, 0, τ);
+            context.stroke();
+          };
+        });
+
+
+    }, 1000);
+
+
+
+    d3.timer(function (elapsed) {
+      console.log("interval")
+      const { x, y } = getCoordinates(elapsed);
+      // const { x, y } = spirograph(elapsed); 
+          x1 = x;
+          y1 = y;
+
+
+    }, 500);
+
+    function move(x, y) {
+      var mouse = d3.mouse(this);
+      x1 = mouse[0];
+      y1 = mouse[1];
+      d3.event.preventDefault();
+    }
+
+  </script>

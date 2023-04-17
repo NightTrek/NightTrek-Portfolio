@@ -19,8 +19,8 @@ const ContactSection = () => {
           am open to{' '}
           <span className="font-normal text-default-500">hybrid</span> or{' '}
           <span className="font-normal text-default-500">remote </span>
-          work opportunities. If you think I would be a good fit for company
-          please set some time up to chat.
+          work opportunities. If you think I would be a good fit for your
+          company please set some time up to chat.
         </div>
         <div className="my-10 flex justify-evenly">
           <ButtonBright

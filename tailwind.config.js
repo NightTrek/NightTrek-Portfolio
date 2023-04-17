@@ -22,6 +22,7 @@ module.exports = {
       backgroundImage: {
         'fp-background': "url('/flowerpatch-home-bg.jpg')",
         'hero-texture': "url('/hexagonFooter.svg')",
+        'agro-background': "url('/agromation-bg.png')",
       },
       colors: {
         gray: {
@@ -58,6 +59,9 @@ module.exports = {
           200: 'rgb(177, 38, 156)',
           300: 'rgb(166, 107, 208)',
           400: 'rgb(110, 68, 130)',
+        },
+        dual4t: {
+          100: '#343e3d',
         },
       },
     },

@@ -36,14 +36,12 @@ const Hero = () => {
 };
 
 const Index = () => {
-  // const router = useRouter();
-
   return (
     <Main
       meta={
         <Meta
           title="Nighttreks's portfolio"
-          description="Founders are professional problem solvers who bring people together around their common vision."
+          description="A full stack engineer with a passion for blockchain and web3. Helping build teams which innovate fast to compete with the fast changing software world."
         />
       }
     >

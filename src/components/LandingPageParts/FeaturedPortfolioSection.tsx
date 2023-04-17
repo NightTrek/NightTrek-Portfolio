@@ -56,36 +56,36 @@ const FeaturedPortfolioSection = () => {
           Some Featured Work
         </div>
         <FeatureCard
-          name={'Dapper Dinos Breeding'}
+          name={'Dapper Dinos NFT'}
           imageURL="/DapperDinosBreedPagecrop.PNG"
           description={
-            'Created a breeding experience for an existing Ethereum NFT collection. Designed the breeding algorithm and minting service in Go. Built a Baby Dino rendering service to render the new babies.'
+            'Created a breeding experience for the existing dapper dino Ethereum NFT collection. Developed the Dapper dino breeding experience product inclduing design and implementation from scratch. Built a cross chain breeding algorithm and minting service in Go. Lead the team by communicating with the client and managing team objectives.'
           }
           company="Nugbase"
           buttonTitle="Watch the Video"
           buttonExternalURL="https://youtu.be/Dd4IP3iU6VY"
         />
         <FeatureCard
-          name={'Dapper Dino Account Page'}
-          imageURL="/DapperDinosAccountPage.PNG"
-          description={
-            'Implemented an account system that tracks which Dino NFTs users own. Users can also see which Dino eggs they have and hatch them. The account system supports arbitrary key value data to be attached to the account. '
-          }
-          company="Nugbase"
-          buttonTitle="Watch the Video"
-          buttonExternalURL="https://youtu.be/Dd4IP3iU6VY"
-        />
-        <FeatureCard
-          name={'Flowerpatch Seed Store'}
+          name={'Flowerpatch.app'}
           imageURL="/SeedStoreV1.1.PNG"
           description={
-            'Implemented a new in-game store that allows players to buy items with SEED tokens. The Seed Store uses a new smart contract that supports the sale of both FLOWER NFTs and game items.'
+            'Worked on full stack development of the Flowerpatch.app. Including projects like the FLOWER NFT marketplace and Seed store. Directly built modular wallet support inclduing signature based login for Trezor and ledger. Build extensible user data and account managment features. Managed End to end testing accross the product.'
           }
           company="Nugbase"
           buttonTitle="Read more"
           buttonlink="/nugbase/#flowerpatch"
           imgWidth={512}
           imgHeight={320}
+        />
+        <FeatureCard
+          name={'Agromation SmartGrow'}
+          imageURL="/agromation-dashboard.PNG"
+          description={
+            'Consulted with a hardware manufacturer to design develop a custom software solution for their hardware product. Created a SaaS web application for centralized monitoring and control over their products. Implemented a custom linux based IOT device to interface with the Siemens. Built a custom API to securely transmit and process data from the remote hardware.'
+          }
+          company="Dual4T"
+          buttonTitle="Read more"
+          buttonlink="/dual4t"
         />
       </div>
     </div>
