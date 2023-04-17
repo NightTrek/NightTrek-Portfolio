@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.3.0...v1.4.0) (2023-04-17)
+
+
+### Features
+
+* **button:** added new enum for button styles with flowerpatch and solid button styling ([4177064](https://github.com/NightTrek/NightTrek-Portfolio/commit/4177064236929865f9dce72464ce2f51d4ccc9ee))
+* **hero:** added a new graphic to the hero component of the page and worked on mobile optimization ([1dd9010](https://github.com/NightTrek/NightTrek-Portfolio/commit/1dd9010ea8c913055ff2664a62a177921df7472d))
+
 # [1.3.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.2.0...v1.3.0) (2023-03-03)
 
 
