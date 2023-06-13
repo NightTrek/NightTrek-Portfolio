@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.4.0...v1.5.0) (2023-04-17)
+
+
+### Features
+
+* **all:** massive update to add the agromation page also minor copy changes ([7412dfc](https://github.com/NightTrek/NightTrek-Portfolio/commit/7412dfc822dc3d04cc57d81acf089c47d6b9201b))
+
 # [1.4.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.3.0...v1.4.0) (2023-04-17)
 
 
