@@ -81,7 +81,7 @@ const FeaturedPortfolioSection = () => {
           name={'Agromation SmartGrow'}
           imageURL="/agromation-dashboard.PNG"
           description={
-            'Consulted with a hardware manufacturer to design develop a custom software solution for their hardware product. Created a SaaS web application for centralized monitoring and control over their products. Implemented a custom linux based IOT device to interface with the Siemens. Built a custom API to securely transmit and process data from the remote hardware.'
+            'Consulted with a hardware manufacturer to design and develop a custom software solution for their hardware product. Created a SaaS web application for centralized monitoring and control over their products. Implemented a custom linux based IOT device to interface with the Siemens. Built a custom API to securely transmit and process data from the remote hardware.'
           }
           company="Dual4T"
           buttonTitle="Read more"

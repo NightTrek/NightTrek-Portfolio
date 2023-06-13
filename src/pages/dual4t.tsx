@@ -47,16 +47,18 @@ const Dual4tPage = () => {
           <div className="my-6 flex w-full flex-col justify-evenly ">
             <div>Services Provided</div>
             <ul className="ml-8 list-disc text-base	text-slate-400">
-              <li>Building custom software automation in React</li>
-              <li>Designing and maintaining wordpress websites</li>
+              <li>Built custom software automation in React</li>
+              <li>Designed and maintained wordpress websites</li>
               <li>
-                Setting up and training employees on software like customer
+                Set up and trained employees on software like customer
                 relationship management(CRM), point of sale(POS), and inventory
                 managment
               </li>
-              <li>Writing standard operating procedures for manufacturing</li>
-              <li>Teaching employees industrial processes</li>
-              <li>Consulting on process design for hydrocarbon extraction</li>
+              <li>Wrote standard operating procedures for manufacturing</li>
+              <li>Taught employees industrial processes</li>
+              <li>
+                Consulted on process design for hydrocarbon extraction systems
+              </li>
             </ul>
           </div>
         </div>
@@ -67,10 +69,10 @@ const Dual4tPage = () => {
           <div className="px-4	text-base text-slate-400">
             The biggest client of Dual4T was Agromation, an industrial
             automation company building a modular indoor farming product. In
-            order to differentiat their product i proposed a software
+            order to differentiate their product I proposed a software
             application to allow their customers to monitor and control their
-            systems remotely. Remote monitoring and contral was especially
-            conplex for two reasons: First the systems used a siemens PLC which
+            systems remotely. Remote monitoring and control was especially
+            complex for two reasons: First the systems used a Siemens PLC which
             uses proprietary drivers. Secondly their customers frequently had
             very little internet connectivity.
           </div>
