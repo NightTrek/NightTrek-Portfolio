@@ -1,3 +1,11 @@
+# [1.7.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.6.0...v1.7.0) (2024-01-03)
+
+
+### Features
+
+* **adfs:** afsd ([d8561c8](https://github.com/NightTrek/NightTrek-Portfolio/commit/d8561c824c631cef1f8d14e36350f461788595f9))
+* **design and grammer:** design and grammer ([493dfea](https://github.com/NightTrek/NightTrek-Portfolio/commit/493dfea2f4199a361cb15ea3ed7b338ea48dbdc0))
+
 # [1.6.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.5.0...v1.6.0) (2024-01-03)
 
 
