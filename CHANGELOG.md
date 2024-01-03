@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.5.0...v1.6.0) (2024-01-03)
+
+
+### Features
+
+* **content:** typos ([6073442](https://github.com/NightTrek/NightTrek-Portfolio/commit/6073442fca2435ac713148d8022ca62024743b00))
+
 # [1.5.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.4.0...v1.5.0) (2023-04-17)
 
 
