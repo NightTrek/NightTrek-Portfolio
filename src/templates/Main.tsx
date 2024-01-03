@@ -22,11 +22,11 @@ const Main = (props: IMainProps) => {
         <header className=" shadow-lg">
           <nav className="flex justify-between">
             <Link
-              className="mx-6 my-2 h-12 w-12 hover:border-0 hover:brightness-125		"
+              className="mx-6 my-[1px] h-20 w-20 hover:border-0 hover:brightness-125		"
               href="/"
             >
               <Image
-                src="/NightTrekLogo.svg"
+                src="/Ntreklogov2.svg"
                 alt="Nighttrek logo"
                 width="128"
                 height="128"

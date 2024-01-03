@@ -22,8 +22,8 @@ const Nugbase = () => (
         </div>
         <div className="mx-2 my-10 flex w-full flex-col-reverse flex-wrap justify-between sm:flex-row sm:flex-nowrap">
           <div className="my-4 text-lg text-slate-400">
-            I co-founded nugbabase in 2018 with some friends who shared a
-            passion for blockchain. Nugbase is a Web3 software company building
+            I co-founded Nugbase in 2018 with some friends who shared a passion
+            for blockchain. Nugbase is a Web3 software company building
             blockchain experiences from scratch. Nugbase specializes in building
             games using state of the art NFT technology. Our teams first built
             Flowerpatch, a multiplayer NFT farming game. At the time there were
@@ -50,7 +50,7 @@ const Nugbase = () => (
               evil, or join the cultists to corrupt the world.{' '}
             </p>
             <p className="px-2">
-              Flowerpatch launched in early 2018 on ethereum and grew to over
+              Flowerpatch launched in early 2018 on Ethereum and grew to over
               20,000 FLOWER NFTs. Over 80% of the NFTs on Ethereum were from
               users breeding on the platform. High gas costs on Ethereum drove
               the project multi-chain, and we deployed the FLOWER NFT smart

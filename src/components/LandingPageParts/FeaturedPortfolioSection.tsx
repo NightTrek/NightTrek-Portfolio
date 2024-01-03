@@ -59,7 +59,7 @@ const FeaturedPortfolioSection = () => {
           name={'Dapper Dinos NFT'}
           imageURL="/DapperDinosBreedPagecrop.PNG"
           description={
-            'Created a breeding experience for the existing dapper dino Ethereum NFT collection. Developed the Dapper dino breeding experience product inclduing design and implementation from scratch. Built a cross chain breeding algorithm and minting service in Go. Lead the team by communicating with the client and managing team objectives.'
+            'Created a breeding experience for the existing Dapper Dino Ethereum NFT collection. Developed the Dapper Dino breeding experience product inclduing design and implementation from scratch. Built a cross-chain breeding algorithm and minting service in Go. Lead the team by communicating with the client and managing team objectives.'
           }
           company="Nugbase"
           buttonTitle="Watch the Video"
@@ -69,7 +69,7 @@ const FeaturedPortfolioSection = () => {
           name={'Flowerpatch.app'}
           imageURL="/SeedStoreV1.1.PNG"
           description={
-            'Worked on full stack development of the Flowerpatch.app. Including projects like the FLOWER NFT marketplace and Seed store. Directly built modular wallet support inclduing signature based login for Trezor and ledger. Build extensible user data and account managment features. Managed End to end testing accross the product.'
+            'Worked on full stack development of the Flowerpatch.app, including projects like the FLOWER NFT marketplace and Seed store. Directly built modular wallet support including signature-based login for Trezor and Ledger. Built extensible user data and account management features. Managed end-to-end testing across the product.'
           }
           company="Nugbase"
           buttonTitle="Read more"
@@ -81,7 +81,7 @@ const FeaturedPortfolioSection = () => {
           name={'Agromation SmartGrow'}
           imageURL="/agromation-dashboard.PNG"
           description={
-            'Consulted with a hardware manufacturer to design and develop a custom software solution for their hardware product. Created a SaaS web application for centralized monitoring and control over their products. Implemented a custom linux based IOT device to interface with the Siemens. Built a custom API to securely transmit and process data from the remote hardware.'
+            'Consulted with a hardware manufacturer to design and develop a custom software solution for their hardware product. Created a SaaS web application for centralized monitoring and control over their products. Implemented a Linux-based IoT device to interface with the Siemens controller. Built an API to securely transmit and process data from the remote hardware.'
           }
           company="Dual4T"
           buttonTitle="Read more"
