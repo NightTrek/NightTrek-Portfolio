@@ -14,7 +14,7 @@ const Nugbase = () => (
   >
     <div className="my-40 flex w-full content-center justify-evenly">
       <div className="w-full max-w-4xl flex-col">
-        <div className="flex flex-wrap items-end justify-between px-2 text-3xl font-bold text-white sm:flex-nowrap">
+        <div className="flex select-none flex-wrap items-end justify-between px-2 text-3xl font-bold text-white sm:flex-nowrap">
           Nugbase{' '}
           <span className="px-1 text-lg text-default-500">
             Creators of innovative blockchain experiences.

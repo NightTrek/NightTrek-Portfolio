@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutMeSection = () => (
   <div
-    className="mb-40 mt-10 flex flex-col items-center justify-start"
+    className="mb-40 mt-10 flex select-none flex-col items-center justify-start"
     id={'about'}
   >
     <div className="flex w-full max-w-3xl flex-col content-between justify-start px-2 text-base">
@@ -21,11 +21,8 @@ const AboutMeSection = () => (
         </div>
         <div className="my-6 text-slate-400">
           In 2018 my passion for blockchain technology led me to cofound the
-          Web3 company Nugbase. My role started off as business operations but I
-          quickly evolved to a software engineering role. Our rapid grown pushed
-          me to lead our contract engineering division, where i consulted with
-          clients to design and build their Web3 products. Nugbase&rsquo;s core
-          product is an NFT collection and Web3 game called{' '}
+          Web3 company Nugbase. Nugbase&rsquo;s core product is an NFT
+          collection and Web3 game called{' '}
           <a
             href="https://flowerpatch.app/"
             className="text-default-500"
@@ -33,6 +30,10 @@ const AboutMeSection = () => (
           >
             Flowerpatch.
           </a>{' '}
+          My role started off as business operations but I quickly evolved to a
+          software engineering role. Our rapid growth pushed me to lead our
+          contract engineering division, where I consulted with clients to
+          design and build their Web3 products.
         </div>
         <div className="mb-6 text-slate-400">
           In 2023 I left Nugbase to work at a smart wallet company called

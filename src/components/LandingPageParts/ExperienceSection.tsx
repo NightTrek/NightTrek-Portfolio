@@ -20,11 +20,11 @@ const Experience: ExperienceJson = {
   'Fun.xyz': {
     company: 'Fun.xyz',
     title: 'Software Engineer',
-    dates: 'April 2022 - present',
+    dates: 'April 2023 - present',
     description:
       'Designed and built leading account abstraction wallets for EVM chains',
     bullet: [
-      'Led the product and engineering of the Account Abstraction react SDK.',
+      'Led the product and engineering of the Account Abstraction React SDK.',
       'Worked with full stack technologies to build RBAC features for multi-factor authentication and account recovery.',
       'Directly contributed to the documentation and improved the developer experience of the SDK',
     ],
@@ -89,7 +89,7 @@ const ExperienceSection = () => {
 
   return (
     <div
-      className="my-40 ml-4  flex h-fit min-h-[420px] flex-col items-center justify-start"
+      className="my-40 ml-4  flex h-fit min-h-[420px] select-none flex-col items-center justify-start"
       id={'experience'}
     >
       <div className="flex w-full max-w-4xl flex-col content-between justify-start text-base">
@@ -104,7 +104,7 @@ const ExperienceSection = () => {
               if (index === focus)
                 return (
                   <div
-                    className="group flex h-14 flex-nowrap text-lg hover:bg-slate-700"
+                    className="group flex h-14 cursor-pointer select-none flex-nowrap text-lg hover:bg-slate-700"
                     key={index}
                   >
                     <div className="h-full w-1 bg-default-500 py-4"></div>
@@ -115,7 +115,7 @@ const ExperienceSection = () => {
                 );
               return (
                 <div
-                  className="group flex h-14 flex-nowrap text-lg hover:bg-slate-700"
+                  className="group flex h-14 cursor-pointer select-none flex-nowrap text-lg hover:bg-slate-700"
                   key={index}
                   onClick={() => {
                     setFocus(index);

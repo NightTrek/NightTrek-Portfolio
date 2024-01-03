@@ -15,7 +15,7 @@ type IMainProps = {
 const Main = (props: IMainProps) => {
   const [menu, setMenu] = React.useState(false);
   return (
-    <div className="w-full text-white antialiased">
+    <div className="w-full select-none text-white antialiased">
       {props.meta}
 
       <div className="mx-auto">
@@ -72,7 +72,7 @@ const Main = (props: IMainProps) => {
               </li>
               <li className="mr-6">
                 <ButtonBright
-                  externalURL="https://firebasestorage.googleapis.com/v0/b/nighttrek-web3-portfolio.appspot.com/o/Daniel_Steigman_Resume_2023.pdf?alt=media&token=a29a97b7-a4f8-4dc4-a766-e94ba8f54db1"
+                  externalURL="https://docs.google.com/document/d/13B0cJgR2gN59TG9CHTMwg6VpKJ5cJvun/edit?usp=sharing&ouid=106817364743791808650&rtpof=true&sd=true"
                   title="Resume"
                 />
               </li>

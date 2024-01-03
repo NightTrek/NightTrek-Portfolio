@@ -14,13 +14,13 @@ const ContactSection = () => {
           Contact Me
         </div>
         <div className="text-slate-400">
-          I am activly interviewing for roles in{' '}
+          I am actively interviewing for roles in{' '}
           <span className="font-normal text-default-500">San Francisco.</span> I
           am open to{' '}
           <span className="font-normal text-default-500">hybrid</span> or{' '}
           <span className="font-normal text-default-500">remote </span>
           work opportunities. If you think I would be a good fit for your
-          company please set some time up to chat.
+          company please set some time to chat.
         </div>
         <div className="my-10 flex justify-evenly">
           <ButtonBright

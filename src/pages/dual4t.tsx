@@ -21,7 +21,7 @@ const Dual4tPage = () => {
     >
       <div className="my-40 flex w-full content-center justify-evenly">
         <div className="w-full max-w-4xl flex-col">
-          <div className="flex flex-col items-start justify-between px-2 text-3xl font-bold text-white">
+          <div className="flex select-none flex-col items-start justify-between px-2 text-3xl font-bold text-white">
             Dual4T{' '}
             <span className="px-1 text-lg text-default-500">
               Innovation and software automation consulting
