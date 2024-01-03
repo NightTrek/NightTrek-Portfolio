@@ -17,6 +17,19 @@ type ExperienceJson = {
 };
 
 const Experience: ExperienceJson = {
+  'Fun.xyz': {
+    company: 'Fun.xyz',
+    title: 'Software Engineer',
+    dates: 'April 2022 - present',
+    description:
+      'Designed and built leading account abstraction wallets for EVM chains',
+    bullet: [
+      'Lead the product and engineering of the Account Abstraction react SDK.',
+      'Worked with full stack technologies to built RBAC features for Multi factor authentication and account recovery.',
+      'Directly contributed to the documentation and developer experience of the SDK',
+    ],
+    link: 'https://fun.xyz',
+  },
   Nugbase: {
     company: 'Nugbase',
     title: 'Software Engineer / Cofounder',

@@ -50,6 +50,25 @@ module.exports = {
           500: '#38E4AE',
         },
       },
+      animation: {
+        'slide-from-left': 'slide-in-from-left 300ms ease-out',
+      },
+      keyframes: {
+        'slide-in-from-left': {
+          '0%': {
+            transform: 'translateX(-100%)',
+            opacity: 0,
+          },
+          '80%': {
+            transform: 'translateX(-20%)',
+            opacity: 0.9,
+          },
+          '100%': {
+            transform: 'translateX(0)',
+            opacity: 1,
+          },
+        },
+      },
     },
   },
   plugins: [],

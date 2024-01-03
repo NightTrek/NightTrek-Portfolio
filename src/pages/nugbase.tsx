@@ -19,7 +19,7 @@ const Nugbase = () => (
             Creators of innovative blockchain experiences.
           </span>
         </div>
-        <div className="my-10 mx-2 flex w-full flex-col-reverse flex-wrap justify-between sm:flex-row sm:flex-nowrap">
+        <div className="mx-2 my-10 flex w-full flex-col-reverse flex-wrap justify-between sm:flex-row sm:flex-nowrap">
           <div className="my-4 text-lg text-slate-400">
             Nugbase is a web3 software company specializing in game devlopment
             and NFT technology. Nugbase builds blockchain products for builders
@@ -32,7 +32,7 @@ const Nugbase = () => (
     <div className="h-120 my-10 flex w-full content-center justify-evenly bg-purple-700 py-20 sm:h-96 sm:bg-fp-background">
       <div className="w-full max-w-2xl flex-col">
         <div className="flex px-2 font-bold text-white">Flowerpatch</div>
-        <div className="my-10 mx-2 flex w-full flex-col justify-between">
+        <div className="mx-2 my-10 flex w-full flex-col justify-between">
           <div className="my-4 text-lg text-slate-400">
             Flowerpatch is web game about growing and breeding FLOWER NFTs in a
             multiplayer world. Grow your garden, fight the forces of evil, or
