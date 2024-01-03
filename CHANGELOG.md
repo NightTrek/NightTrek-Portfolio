@@ -1,3 +1,15 @@
+# [1.8.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.7.0...v1.8.0) (2024-01-03)
+
+
+### Bug Fixes
+
+* **hero:** grammer ([fb8dc89](https://github.com/NightTrek/NightTrek-Portfolio/commit/fb8dc89ab51b26de9380dde367d88a9da54018bb))
+
+
+### Features
+
+* **grammer:** grammer ([ee0dbc0](https://github.com/NightTrek/NightTrek-Portfolio/commit/ee0dbc086a0c8b2f8532dcab23a20cfceaf3c5eb))
+
 # [1.7.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.6.0...v1.7.0) (2024-01-03)
 
 
