@@ -57,6 +57,15 @@ const Meta = (props: IMetaProps) => {
           url: props.canonical,
           locale: AppConfig.locale,
           site_name: AppConfig.site_name,
+          images: [
+            {
+              url: `${router.basePath}/OG/HomePageOG.jpg`,
+              width: 800,
+              height: 600,
+              alt: 'Home page image',
+              type: 'image/jpeg',
+            },
+          ],
         }}
       />
     </>

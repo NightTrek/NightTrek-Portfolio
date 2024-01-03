@@ -15,9 +15,14 @@ module.exports = {
       '6xl': '6rem',
     },
     extend: {
+      screens: {
+        short: { raw: '(max-height: 800px)' },
+        xshort: { raw: '(max-height: 700px)' },
+      },
       backgroundImage: {
         'fp-background': "url('/flowerpatch-home-bg.jpg')",
-        // 'footer-texture': "url('/img/footer-texture.png')",
+        'hero-texture': "url('/hexagonFooter.svg')",
+        'agro-background': "url('/agromation-bg.png')",
       },
       colors: {
         gray: {
@@ -48,6 +53,15 @@ module.exports = {
           300: '#AEDCC0',
           400: '#7BD389',
           500: '#38E4AE',
+        },
+        nugbasePurple: {
+          100: 'rgb(229, 77, 207)',
+          200: 'rgb(177, 38, 156)',
+          300: 'rgb(166, 107, 208)',
+          400: 'rgb(110, 68, 130)',
+        },
+        dual4t: {
+          100: '#343e3d',
         },
       },
       animation: {

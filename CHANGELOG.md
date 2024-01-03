@@ -1,3 +1,25 @@
+# [1.6.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.5.0...v1.6.0) (2024-01-03)
+
+
+### Features
+
+* **content:** typos ([6073442](https://github.com/NightTrek/NightTrek-Portfolio/commit/6073442fca2435ac713148d8022ca62024743b00))
+
+# [1.5.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.4.0...v1.5.0) (2023-04-17)
+
+
+### Features
+
+* **all:** massive update to add the agromation page also minor copy changes ([7412dfc](https://github.com/NightTrek/NightTrek-Portfolio/commit/7412dfc822dc3d04cc57d81acf089c47d6b9201b))
+
+# [1.4.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.3.0...v1.4.0) (2023-04-17)
+
+
+### Features
+
+* **button:** added new enum for button styles with flowerpatch and solid button styling ([4177064](https://github.com/NightTrek/NightTrek-Portfolio/commit/4177064236929865f9dce72464ce2f51d4ccc9ee))
+* **hero:** added a new graphic to the hero component of the page and worked on mobile optimization ([1dd9010](https://github.com/NightTrek/NightTrek-Portfolio/commit/1dd9010ea8c913055ff2664a62a177921df7472d))
+
 # [1.3.0](https://github.com/NightTrek/NightTrek-Portfolio/compare/v1.2.0...v1.3.0) (2023-03-03)
 
 

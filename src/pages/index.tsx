@@ -10,8 +10,10 @@ import { Main } from '@/templates/Main';
 
 const Hero = () => {
   return (
-    <div className="flex h-screen flex-col items-center justify-center">
-      <div className=" w-full max-w-3xl  flex-col content-between justify-start	">
+    <div className="relative flex h-screen flex-col items-center justify-center ">
+      {/* <video muted autoPlay loop className="absolute z-0 w-full h-full" src=''> */}
+
+      <div className=" w-full max-w-3xl  flex-col content-between justify-start ">
         <h4 className=" px-2 text-lg text-default-500">Hello, my name is</h4>
         <h2 className=" px-2 font-bold" style={{ fontSize: '64px' }}>
           Daniel Steigman.
@@ -21,10 +23,9 @@ const Hero = () => {
           <span className=" text-default-500">Web3</span> revolution.
         </div>
         <div className="px-2 text-base text-slate-400">
-          Software engineering is a passion that allows me to bring new people
-          into the world of Web3. Being a startup founder requires a high level
-          of software competency AND the ability to engage new people and new
-          ideas.
+          I traveled the world helping buisnesses implement innovative solutions
+          for their problems. After running a Web3 startup for 4 years I am
+          activly looking for new opportunities to build the future of web3.
         </div>
         <div className="my-8 flex px-2 text-lg">
           <ButtonBright title="Read about my work at Nugbase" link="/nugbase" />
@@ -35,14 +36,12 @@ const Hero = () => {
 };
 
 const Index = () => {
-  // const router = useRouter();
-
   return (
     <Main
       meta={
         <Meta
           title="Nighttreks's portfolio"
-          description="Founders are professional problem solvers who bring people together around their common vision."
+          description="A full stack engineer with a passion for blockchain and web3. Helping build teams which innovate fast to compete with the fast changing software world."
         />
       }
     >

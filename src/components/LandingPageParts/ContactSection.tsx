@@ -8,7 +8,7 @@ const ContactSection = () => {
       className="my-40 flex h-fit flex-col items-center justify-start"
       id={'contact'}
     >
-      <div className="flex w-full max-w-2xl flex-col content-between justify-start py-20 px-6 text-base">
+      <div className="flex w-full max-w-2xl flex-col content-between justify-start px-6 py-20 text-base">
         <div className="text-2xl font-bold text-slate-400">
           <span className="font-normal text-default-500">4. {` `}</span>
           Contact Me
@@ -19,8 +19,8 @@ const ContactSection = () => {
           am open to{' '}
           <span className="font-normal text-default-500">hybrid</span> or{' '}
           <span className="font-normal text-default-500">remote </span>
-          work opportunities. If you think I would be a good fit for company
-          please set some time up to chat.
+          work opportunities. If you think I would be a good fit for your
+          company please set some time up to chat.
         </div>
         <div className="my-10 flex justify-evenly">
           <ButtonBright

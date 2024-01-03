@@ -1,7 +1,10 @@
 import React from 'react';
 
 const AboutMeSection = () => (
-  <div className="mb-40 flex flex-col items-center justify-start" id={'about'}>
+  <div
+    className="mb-40 mt-10 flex flex-col items-center justify-start"
+    id={'about'}
+  >
     <div className="flex w-full max-w-3xl flex-col content-between justify-start px-2 text-base">
       <div className="text-2xl font-bold text-slate-400">
         <span className="font-normal text-default-500">1. {` `}</span>
