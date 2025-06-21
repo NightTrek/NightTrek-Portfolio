@@ -19,14 +19,14 @@ const Hero = () => {
           Daniel Steigman.
         </h2>
         <div className=" px-2 text-lg text-slate-400">
-          I build blockchain products to empower the{' '}
-          <span className=" text-default-500">Web3</span> revolution.
+          I build innovative products that empower developers and{' '}
+          <span className=" text-default-500">transform</span> how teams work.
         </div>
         <div className="px-2 text-base text-slate-400">
           I have traveled the world, helping businesses implement innovative
-          solutions for their problems. After running a Web3 startup for 4
-          years, I am actively looking for new opportunities to build the future
-          of Web3.
+          solutions for their problems. Currently Head of Operations at Cline,
+          scaling world-class teams and launching products that serve millions
+          of developers worldwide.
         </div>
         <div className="my-8 flex px-2 text-lg">
           <ButtonBright title="Read about my work at Nugbase" link="/nugbase" />
@@ -42,7 +42,7 @@ const Index = () => {
       meta={
         <Meta
           title="Nighttreks's portfolio"
-          description="A full stack engineer with a passion for blockchain and web3. Helping build teams which innovate fast to compete with the fast changing software world."
+          description="A full stack engineer and product leader. Helping build teams which innovate fast to compete with the fast changing software world."
         />
       }
     >
