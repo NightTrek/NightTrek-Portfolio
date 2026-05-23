@@ -1,5 +1,3 @@
-import React from 'react';
-
 const AboutMeSection = () => (
   <section
     className="mx-auto grid max-w-7xl scroll-mt-28 grid-cols-1 gap-4 px-5 py-16 md:px-10 lg:grid-cols-12 lg:py-24"

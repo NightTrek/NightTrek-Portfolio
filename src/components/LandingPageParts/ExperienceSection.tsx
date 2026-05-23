@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 
 import ButtonBright from '../ButtonBright';
 
@@ -116,8 +116,8 @@ const Experience: ExperienceJson = {
 };
 
 const ExperienceSection = () => {
-  const [focus, setFocus] = React.useState(0);
-  const [isAnimating, setIsAnimating] = React.useState(false);
+  const [focus, setFocus] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const getExperienceKey = (number: number): ExperienceType => {
     const keys = Object.keys(Experience);

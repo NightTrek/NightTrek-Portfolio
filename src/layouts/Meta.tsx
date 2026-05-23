@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
 
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -47,27 +46,45 @@ const Meta = (props: IMetaProps) => {
           key="favicon"
         />
       </Head>
-      <NextSeo
-        title={props.title}
-        description={props.description}
-        canonical={props.canonical}
-        openGraph={{
-          title: props.title,
-          description: props.description,
-          url: props.canonical,
-          locale: AppConfig.locale,
-          site_name: AppConfig.site_name,
-          images: [
-            {
-              url: `${router.basePath}/OG/HomePageOG.jpg`,
-              width: 800,
-              height: 600,
-              alt: 'Home page image',
-              type: 'image/jpeg',
-            },
-          ],
-        }}
-      />
+      <Head>
+        <title>{props.title}</title>
+        <meta name="description" content={props.description} key="desc" />
+        {props.canonical && (
+          <link rel="canonical" href={props.canonical} key="canonical" />
+        )}
+        <meta property="og:title" content={props.title} key="og-title" />
+        <meta
+          property="og:description"
+          content={props.description}
+          key="og-desc"
+        />
+        {props.canonical && (
+          <meta property="og:url" content={props.canonical} key="og-url" />
+        )}
+        <meta property="og:locale" content={AppConfig.locale} key="og-locale" />
+        <meta
+          property="og:site_name"
+          content={AppConfig.site_name}
+          key="og-site"
+        />
+        <meta
+          property="og:image"
+          content={`${router.basePath}/OG/HomePageOG.jpg`}
+          key="og-image"
+        />
+        <meta property="og:image:width" content="800" key="og-image-width" />
+        <meta property="og:image:height" content="600" key="og-image-height" />
+        <meta
+          property="og:image:alt"
+          content="Home page image"
+          key="og-image-alt"
+        />
+        <meta
+          property="og:image:type"
+          content="image/jpeg"
+          key="og-image-type"
+        />
+      </Head>
     </>
   );
 };

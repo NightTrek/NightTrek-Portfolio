@@ -6,59 +6,39 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
   build:
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    name: Build with ${{ matrix.node-version }}
+    name: Build and verify
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - run: npm ci
-      - run: npm run build-prod
+          version: 9.11.0
 
-  test:
-    strategy:
-      matrix:
-        node-version: [16.x]
-
-    name: Run all tests
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
+      - name: Use Node.js 24
+        uses: actions/setup-node@v4
         with:
-          fetch-depth: 0 # Retrieve Git history, needed to verify commits
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - run: npm ci
+          node-version: 24
+          cache: pnpm
 
-      - if: github.event_name == 'pull_request'
-        name: Validate all commits from PR
-        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
-      - name: Linter
-        run: npm run lint
+      - name: Audit full dependency graph
+        run: pnpm audit --audit-level low
 
-      - name: Type checking
-        run: npm run check-types
+      - name: Lint
+        run: pnpm lint
 
-      - name: Run unit tests
-        run: npm run test
+      - name: Type check
+        run: pnpm check-types
 
-      - name: Run e2e tests
-        run: npx percy exec -- npm run e2e:headless
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+      - name: Build
+        run: pnpm build

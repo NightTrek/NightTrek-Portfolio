@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Hero from '@/components/Hero';
 import AboutMeSection from '@/components/LandingPageParts/AboutSection';
 import ContactSection from '@/components/LandingPageParts/ContactSection';

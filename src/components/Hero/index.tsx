@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import React from 'react';
 
 import ButtonBright, { ButtonStyles } from '@/components/ButtonBright';
 
