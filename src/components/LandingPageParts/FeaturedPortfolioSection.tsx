@@ -13,26 +13,52 @@ type FeatureProps = {
   githubURL?: string;
   imgWidth?: number;
   imgHeight?: number;
+  tags?: string[];
+  imagePosition?: string;
+  imageFit?: 'cover' | 'contain';
 };
 const FeatureCard = (props: FeatureProps) => {
+  const imageFit =
+    props.imageFit === 'contain' ? 'object-contain' : 'object-cover';
+
   return (
-    <div className="my-12 flex h-auto w-[100%] flex-wrap content-evenly justify-start rounded-3xl bg-gradient-to-t from-default-100 to-default-200 shadow-lg sm:h-96 sm:flex-nowrap">
-      <div className="m-4 flex w-full justify-center rounded-lg px-2">
+    <div className="glass-panel group grid overflow-hidden rounded-3xl transition-all duration-500 hover:border-default-500/60 hover:shadow-[0_0_44px_rgba(0,225,171,0.14)] md:grid-cols-[0.95fr_1.05fr]">
+      <div className="relative min-h-[260px] overflow-hidden bg-obsidian-900 p-4 md:min-h-[340px]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(0,225,171,0.18),transparent_20rem),radial-gradient(circle_at_80%_80%,rgba(74,142,255,0.12),transparent_20rem)]" />
         <Image
-          className="min-w-[320px] rounded-lg"
+          className={`relative h-full w-full rounded-2xl ${imageFit} grayscale-[0.18] transition duration-700 group-hover:scale-[1.025] group-hover:grayscale-0 ${
+            props.imagePosition || 'object-center'
+          }`}
           src={props.imageURL}
           alt={props.name}
           width={props.imgWidth || 320}
           height={props.imgHeight || 320}
         />
+        <div className="pointer-events-none absolute inset-4 rounded-2xl bg-gradient-to-t from-obsidian-900/45 via-transparent to-transparent" />
       </div>
-      <div className="my-4 flex flex-col content-evenly justify-evenly p-4">
-        <div className="text-lg font-bold text-white">
-          {props.name}{' '}
-          <span className="text-default-500">{`@ ${props.company}`}</span>
+      <div className="flex flex-col justify-between p-6 md:p-8">
+        <div>
+          <div className="font-display text-[28px] font-bold leading-tight text-obsidian-50 md:text-[36px]">
+            {props.name}{' '}
+            <span className="text-default-500">{`@ ${props.company}`}</span>
+          </div>
+          {props.tags && (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {props.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-md bg-electric-500/10 px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-electric-300"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+          <div className="mt-4 text-[16px] leading-7 text-obsidian-200 md:text-[18px]">
+            {props.description}
+          </div>
         </div>
-        <div className="text-slate-400">{props.description}</div>
-        <div className="flex justify-end">
+        <div className="mt-6 flex justify-end">
           <ButtonBright
             title={props.buttonTitle}
             link={props.buttonlink || ''}
@@ -46,24 +72,42 @@ const FeatureCard = (props: FeatureProps) => {
 
 const FeaturedPortfolioSection = () => {
   return (
-    <div
-      className="flex h-auto flex-col items-center justify-start"
+    <section
+      className="mx-auto flex h-auto max-w-7xl scroll-mt-28 flex-col items-center justify-start px-5 py-16 md:px-10 lg:py-24"
       id={'work'}
     >
-      <div className="flex w-full max-w-4xl flex-col content-between justify-start text-base">
-        <div className="px-2 text-2xl font-bold text-slate-400">
-          <span className="font-normal text-default-500">3. {` `}</span>
+      <div className="flex w-full flex-col content-between justify-start gap-5 text-base">
+        <div className="font-display text-[36px] font-bold leading-tight text-obsidian-50 md:text-[52px]">
+          <span className="font-normal text-default-500">03. </span>
           Some Featured Work
         </div>
         <FeatureCard
-          name={'Dapper Dinos NFT'}
-          imageURL="/DapperDinosBreedPagecrop.PNG"
+          name={'Codex enterprise deployment'}
+          imageURL="/codex-enterprise-hero.png"
           description={
-            'Created a breeding experience for the existing Dapper Dino Ethereum NFT collection. Developed the Dapper Dino breeding experience product inclduing design and implementation from scratch. Built a cross-chain breeding algorithm and minting service in Go. Lead the team by communicating with the client and managing team objectives.'
+            'Forward-deployed Codex into high-security enterprise environments, starting with NVIDIA. Focused on onboarding, secure sandboxing, deterministic controls, hardware-farm workflows, and the practical systems that let large companies delegate real engineering work to agents.'
           }
-          company="Nugbase"
-          buttonTitle="Watch the Video"
-          buttonExternalURL="https://youtu.be/Dd4IP3iU6VY"
+          company="OpenAI"
+          buttonTitle="Read the case study"
+          buttonlink="/codex"
+          imgWidth={768}
+          imgHeight={512}
+          tags={['OpenAI', 'Enterprise', 'Security']}
+        />
+        <FeatureCard
+          name={'Scaling Coding Agents'}
+          imageURL="/cline-product-mascot-card.png"
+          description={
+            'Joined Cline to be the first AI engineer and ended up leading the company as Head of Operations. Scaled the team to 45 people, managed engineering and product teams, built product analytics and telemetry loops, and helped scale company revenue by millions of dollars while competing with the most funded companies in venture capital.'
+          }
+          company="Cline"
+          buttonTitle="Read the Cline story"
+          buttonlink="/cline"
+          imgWidth={960}
+          imgHeight={720}
+          imagePosition="object-left"
+          imageFit="contain"
+          tags={['Applied AI', 'Operations', 'Revenue']}
         />
         <FeatureCard
           name={'Flowerpatch.app'}
@@ -76,6 +120,7 @@ const FeaturedPortfolioSection = () => {
           buttonlink="/nugbase/#flowerpatch"
           imgWidth={512}
           imgHeight={320}
+          tags={['Flowerpatch', 'Web3', 'Wallets']}
         />
         <FeatureCard
           name={'Agromation SmartGrow'}
@@ -86,9 +131,10 @@ const FeaturedPortfolioSection = () => {
           company="Dual4T"
           buttonTitle="Read more"
           buttonlink="/dual4t"
+          tags={['IoT', 'Linux', 'SaaS']}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

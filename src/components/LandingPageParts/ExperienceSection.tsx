@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import React from 'react';
 
 import ButtonBright from '../ButtonBright';
@@ -17,19 +16,34 @@ type ExperienceJson = {
 };
 
 const Experience: ExperienceJson = {
+  OpenAI: {
+    company: 'OpenAI',
+    title: 'Product Manager, Codex',
+    dates: '2026 - Present',
+    description:
+      'Forward-deployed product work for secure enterprise Codex adoption.',
+    bullet: [
+      'Brought Codex into NVIDIA-scale engineering and hardware-farm workflows',
+      'Built onboarding patterns for thousands of enterprise users',
+      'Worked on sandboxing, deterministic controls, and LLM review with security teams',
+      'Stayed hands-on with Codex automations, Rust, product feedback, and PRs',
+    ],
+    link: '/codex',
+  },
   Cline: {
     company: 'Cline',
     title: 'Head of Operations',
-    dates: 'January 2025 - Present',
+    dates: 'January 2025 - January 2026',
     description:
       'Leading operations to democratize the 10x engineer and make every developer 10x better',
     bullet: [
-      'Building world-class AI team to compete with multi-billion dollar competitors',
-      'Scaled team from 2 to 24 people in first 6 months while maintaining high hiring standards',
+      'Joined Cline to be the first AI engineer and ended up leading the company as Head of Operations',
+      'Scaled the team to 45 people while maintaining high hiring standards',
       "Launched Cline's first paid product (Cline Accounts) driving monetization strategy",
-      'Orchestrated strategic partnerships and helped set product direction',
+      'Managed multiple engineering teams and the product team to align efforts with enterprise data strategies',
       'Contributed to explosive user growth from 300K to 2M users in 6 months',
-      'Helping democratize the 10x engineer through AI-powered development tools',
+      'Helped scale company revenue by millions of dollars',
+      'Implemented product analytics and telemetry strategy to monitor agent performance in real-world applications',
     ],
     link: '/cline',
   },
@@ -133,52 +147,46 @@ const ExperienceSection = () => {
   const currentExperience = getExperienceKey(focus);
 
   return (
-    <div
-      className="my-40 flex h-fit min-h-[500px] select-none flex-col items-center justify-start px-4"
+    <section
+      className="mx-auto max-w-7xl scroll-mt-28 overflow-hidden px-5 py-16 md:px-10 lg:py-24"
       id={'experience'}
     >
-      <div className="flex w-full max-w-6xl flex-col content-between justify-start text-base">
-        {/* Section Header */}
-        <div className="mb-12 text-center sm:text-left">
-          <div className="text-3xl font-bold text-slate-400">
-            <span className="font-normal text-default-500">2. </span>
+      <div className="mx-auto min-w-0 text-[16px]">
+        <div className="mb-8 text-left">
+          <div className="font-display text-[36px] font-bold text-obsidian-50 md:text-[52px]">
+            <span className="font-normal text-default-500">02. </span>
             Work Experience
           </div>
-          <div className="mt-2 text-slate-500">
-            Building innovative products and scaling world-class teams
+          <div className="mt-2 max-w-2xl text-[18px] leading-8 text-obsidian-200">
+            A timeline of technical product work, operating roles, and company
+            building.
           </div>
         </div>
 
-        {/* Experience Container */}
-        <div className="flex flex-col gap-8 lg:flex-row">
-          {/* Company Navigation */}
-          <div className="w-full lg:w-80">
-            <div className="rounded-xl border border-slate-700/50 bg-slate-800/50 p-6 backdrop-blur-sm">
-              <div className="space-y-2">
-                {Object.keys(Experience).map((experience, index): ReactNode => {
+        <div className="glass-panel reveal-panel min-w-0 overflow-hidden rounded-3xl">
+          <div className="grid min-w-0 lg:grid-cols-[320px_1fr]">
+            <div className="min-w-0 border-b border-white/10 bg-white/[0.025] lg:border-b-0 lg:border-r lg:border-white/10">
+              <div className="flex gap-2 overflow-x-auto p-3 lg:flex-col lg:overflow-visible lg:p-5">
+                {Object.keys(Experience).map((experience, index) => {
                   const isActive = index === focus;
                   return (
-                    <div
+                    <button
                       key={index}
+                      type="button"
+                      aria-pressed={isActive}
                       className={`
-                        group relative cursor-pointer rounded-lg p-4 transition-all duration-300 ease-out
+                        group relative min-w-[172px] cursor-pointer rounded-xl border px-4 py-3 text-left transition-all duration-300 ease-out lg:w-full lg:min-w-0
                         ${
                           isActive
-                            ? 'to-default-600/20 border-l-4 border-default-500 bg-gradient-to-r from-default-500/20 text-default-500 shadow-lg shadow-default-500/10'
-                            : 'text-slate-300 hover:bg-slate-700/50 hover:text-default-400'
+                            ? 'border-default-500/50 bg-default-500/10 text-default-400 shadow-[0_0_32px_rgba(0,225,171,0.12)]'
+                            : 'border-transparent text-obsidian-200 hover:border-white/10 hover:bg-white/[0.05] hover:text-default-400'
                         }
                       `}
                       onClick={() => handleExperienceChange(index)}
                     >
-                      {/* Active indicator */}
-                      {isActive && (
-                        <div className="to-default-600 absolute left-0 top-0 h-full w-1 animate-pulse rounded-r-full bg-gradient-to-b from-default-400" />
-                      )}
-
-                      {/* Company name */}
                       <div
                         className={`
-                        text-lg font-semibold transition-all duration-300
+                        font-display text-[18px] font-semibold transition-all duration-300
                         ${
                           isActive
                             ? 'text-default-400'
@@ -189,38 +197,24 @@ const ExperienceSection = () => {
                         {experience}
                       </div>
 
-                      {/* Role preview for active item */}
-                      {isActive && (
-                        <div className="animate-fadeIn mt-1 text-sm text-slate-400">
-                          {getExperienceKey(index).title}
-                        </div>
-                      )}
-
-                      {/* Hover effect */}
                       <div
-                        className={`
-                        absolute inset-0 rounded-lg transition-opacity duration-300
-                        ${
-                          isActive
-                            ? 'opacity-0'
-                            : 'opacity-0 group-hover:opacity-100'
-                        }
-                        bg-gradient-to-r from-default-500/5 to-transparent
-                      `}
-                      />
-                    </div>
+                        className={`mt-1 text-[13px] leading-5 ${
+                          isActive ? 'text-obsidian-100' : 'text-obsidian-300'
+                        }`}
+                      >
+                        {isActive
+                          ? getExperienceKey(index).title
+                          : getExperienceKey(index).dates}
+                      </div>
+                    </button>
                   );
                 })}
               </div>
             </div>
-          </div>
 
-          {/* Experience Details */}
-          <div className="flex-1">
             <div
               className={`
-              min-h-[400px] rounded-xl border border-slate-700/30 bg-slate-800/30 p-8 backdrop-blur-sm
-              transition-all duration-300 ease-out
+              min-h-[430px] min-w-0 overflow-hidden p-6 transition-all duration-300 ease-out md:p-10
               ${
                 isAnimating
                   ? 'translate-y-2 opacity-50'
@@ -228,51 +222,48 @@ const ExperienceSection = () => {
               }
             `}
             >
-              {/* Role Header */}
               <div className="mb-6">
                 <div className="mb-4 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                  <h3 className="animate-slideInLeft text-2xl font-bold text-default-400">
+                  <h3 className="animate-slide-in-left break-words font-display text-[28px] font-bold leading-tight text-default-400 md:text-[42px]">
                     {currentExperience.title}
                   </h3>
-                  <div className="animate-slideInRight font-medium text-slate-400">
+                  <div className="animate-slide-in-right font-mono text-[12px] font-bold uppercase tracking-[0.14em] text-electric-300">
                     {currentExperience.dates}
                   </div>
                 </div>
 
                 {currentExperience.description && (
-                  <p className="animate-fadeIn text-lg leading-relaxed text-slate-300">
+                  <p className="animate-fade-in break-words text-[17px] leading-8 text-obsidian-100 md:text-[20px]">
                     {currentExperience.description}
                   </p>
                 )}
               </div>
 
-              {/* Achievements */}
               <div className="mb-8">
-                <h4 className="mb-4 text-lg font-semibold text-slate-300">
-                  Key Achievements
+                <h4 className="mb-4 font-mono text-[12px] font-bold uppercase tracking-[0.2em] text-obsidian-300">
+                  Highlights
                 </h4>
                 <ul className="space-y-3">
                   {currentExperience.bullet.map((achievement, index) => (
                     <li
                       key={index}
                       className={`
-                        animate-slideInUp flex items-start gap-3 leading-relaxed
-                        text-slate-300
+                        flex animate-slide-in-up items-start gap-3 break-words text-[16px] leading-7
+                        text-obsidian-200
                       `}
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
-                      <div className="mt-2 h-2 w-2 shrink-0 animate-pulse rounded-full bg-default-500" />
+                      <div className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-default-500 shadow-[0_0_12px_rgba(0,225,171,0.8)]" />
                       <span>{achievement}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {/* Action Button */}
               {currentExperience.company !== 'BHOGART' &&
                 currentExperience.company !== 'Agromation' && (
                   <div
-                    className="animate-fadeIn"
+                    className="animate-fade-in"
                     style={{ animationDelay: '600ms' }}
                   >
                     <ButtonBright
@@ -285,69 +276,7 @@ const ExperienceSection = () => {
           </div>
         </div>
       </div>
-
-      {/* Custom CSS for animations */}
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-
-        @keyframes slideInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes slideInRight {
-          from {
-            opacity: 0;
-            transform: translateX(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-
-        @keyframes slideInUp {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fadeIn {
-          animation: fadeIn 0.5s ease-out forwards;
-        }
-
-        .animate-slideInLeft {
-          animation: slideInLeft 0.6s ease-out forwards;
-        }
-
-        .animate-slideInRight {
-          animation: slideInRight 0.6s ease-out forwards;
-        }
-
-        .animate-slideInUp {
-          animation: slideInUp 0.4s ease-out forwards;
-          opacity: 0;
-        }
-      `}</style>
-    </div>
+    </section>
   );
 };
 

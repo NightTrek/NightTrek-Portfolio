@@ -1,11 +1,8 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import React from 'react';
 
+import Navigation from '@/components/Navigation';
 import { AppConfig } from '@/utils/AppConfig';
-
-import ButtonBright from '../components/ButtonBright';
 
 type IMainProps = {
   meta: ReactNode;
@@ -13,159 +10,32 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => {
-  const [menu, setMenu] = React.useState(false);
   return (
-    <div className="w-full select-none text-white antialiased">
+    <div className="min-h-screen w-full select-none bg-obsidian-900 text-obsidian-100 antialiased">
       {props.meta}
 
       <div className="mx-auto">
-        <header className=" shadow-lg">
-          <nav className="flex justify-between">
-            <Link
-              className="mx-6 my-[1px] h-20 w-20 hover:border-0 hover:brightness-125		"
-              href="/"
-            >
-              <Image
-                src="/Ntreklogov2.svg"
-                alt="Nighttrek logo"
-                width="128"
-                height="128"
-              />{' '}
-            </Link>
-            <ul className="mx-12 hidden flex-wrap content-center text-base sm:flex">
-              <li className="mr-6 mt-2 flex">
-                <p className="px-4 text-default-500">1.</p>
-                <Link
-                  href="/#about"
-                  className="border-none text-white hover:text-gray-900"
-                >
-                  About
-                </Link>
-              </li>
-              <li className="mr-6 mt-2 flex">
-                <p className="px-4 text-default-500">2.</p>
-                <Link
-                  href="/#experience"
-                  className="border-none text-white hover:text-gray-900"
-                >
-                  Experience
-                </Link>
-              </li>
-              <li className="mr-6 mt-2 flex">
-                <p className="brightText px-4">3.</p>
-                <Link
-                  href="/#work"
-                  className="border-none text-white hover:text-gray-900"
-                >
-                  Portfolio
-                </Link>
-              </li>
-              <li className="mr-6 mt-2 flex">
-                <p className="px-4 text-default-500">4.</p>
+        <Navigation />
+        <main className="content text-xl">{props.children}</main>
 
-                <Link
-                  href="/#contact"
-                  className="border-none text-white hover:text-gray-900"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li className="mr-6">
-                <ButtonBright
-                  externalURL="https://docs.google.com/document/d/13B0cJgR2gN59TG9CHTMwg6VpKJ5cJvun/edit?usp=sharing&ouid=106817364743791808650&rtpof=true&sd=true"
-                  title="Resume"
-                />
-              </li>
-            </ul>
-            <div className="mx-12 flex flex-col content-center sm:hidden">
-              <div
-                className="my-2 h-12 w-12 font-bold hover:bg-red-300"
-                onClick={() => {
-                  setMenu(!menu);
-                }}
-              >
-                <Image
-                  src="/menu.svg"
-                  alt="Menu"
-                  height={48}
-                  width={48}
-                  // className="animate-spin"
-                />
-              </div>
+        <footer className="border-t border-white/10 bg-obsidian-900/80 px-5 py-16 text-center">
+          <div className="mx-auto flex max-w-7xl flex-col items-center gap-6">
+            <div className="font-display text-2xl font-bold text-obsidian-50">
+              Daniel Steigman
             </div>
-          </nav>
-          <nav className="flex flex-nowrap content-center justify-center sm:hidden">
-            {menu && (
-              <ul className="mx-12 flex flex-col content-center justify-evenly text-base">
-                <li className="mr-6 mt-2 flex">
-                  <p className="px-4 text-default-500">1.</p>
-                  <Link
-                    href="/#about"
-                    className="border-none text-white hover:text-gray-900"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li className="mr-6 mt-2 flex">
-                  <p className="px-4 text-default-500">2.</p>
-                  <Link
-                    href="/#experience"
-                    className="border-none text-white hover:text-gray-900"
-                  >
-                    Experience
-                  </Link>
-                </li>
-                <li className="mr-6 mt-2 flex">
-                  <p className="brightText px-4">3.</p>
-                  <Link
-                    href="/#work"
-                    className="border-none text-white hover:text-gray-900"
-                  >
-                    Portfolio
-                  </Link>
-                </li>
-                <li className="mr-6 mt-2 flex">
-                  <p className="px-4 text-default-500">4.</p>
-
-                  <Link
-                    href="/#contact"
-                    className="border-none text-white hover:text-gray-900"
-                  >
-                    Contact
-                  </Link>
-                </li>
-                <li className="my-6 mr-6 flex justify-center">
-                  <ButtonBright
-                    externalURL="https://firebasestorage.googleapis.com/v0/b/nighttrek-web3-portfolio.appspot.com/o/Daniel_Steigman_Resume_2023.pdf?alt=media&token=a29a97b7-a4f8-4dc4-a766-e94ba8f54db1"
-                    title="Resume"
-                  />
-                </li>
-              </ul>
-            )}
-          </nav>
-        </header>
-        <div className="relative">
-          <div className="absolute top-0 z-0 h-full w-full rotate-180 bg-hero-texture bg-contain bg-bottom bg-repeat-x md:h-1/6	" />
-          <main className="content py-5 text-xl short:py-12 xshort:py-24">
-            {props.children}
-          </main>
-        </div>
-
-        <footer className=" py-8 text-center text-sm text-slate-400">
-          © Copyright {new Date().getFullYear()} {AppConfig.title}. Made with{' '}
-          <a
-            className="text-default-500"
-            href="https://github.com/ixartz/Next-js-Boilerplate"
-          >
-            {`@ixartz  Next-js-Boilerplate`}
-          </a>
-          .
-          {/*
-           * PLEASE READ THIS SECTION
-           * I'm an indie maker with limited resources and funds, I'll really appreciate if you could have a link to my website.
-           * The link doesn't need to appear on every pages, one link on one page is enough.
-           * For example, in the `About` page. Thank you for your support, it'll mean a lot to me.
-           */}
+            <div className="flex flex-wrap justify-center gap-6 font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-obsidian-200">
+              <a href="https://github.com/NightTrek">Github</a>
+              <a href="https://discordapp.com/users/367142350151090177">
+                Discord
+              </a>
+              <a href="https://www.linkedin.com/in/nighttrek/">LinkedIn</a>
+              <Link href="/#contact">Contact</Link>
+            </div>
+            <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-obsidian-300">
+              © {new Date().getFullYear()} {AppConfig.title}. Built with
+              precision.
+            </div>
+          </div>
         </footer>
       </div>
     </div>
