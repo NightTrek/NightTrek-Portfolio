@@ -5,7 +5,7 @@ a {
 }
 
 a:hover {
-  @apply border-b-2 border-default-500;
+  color: #36ffc4;
 }
 
 @tailwind components;
@@ -115,5 +115,252 @@ body::before {
 
   to {
     transform: translateY(100%);
+  }
+}
+
+/* Case studies use an explicit editorial scale, independent of the legacy
+   Tailwind sizes used by the homepage and older project pages. */
+.case-study {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 112px 24px 64px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #b9cbc1;
+}
+
+.case-study p {
+  margin: 0;
+}
+
+.case-study a {
+  border: 0;
+  text-decoration: none;
+}
+
+.case-study a:hover {
+  color: #fbfffa;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.case-study-back,
+.case-study-nav a,
+.case-study-links a,
+.case-study-next a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.case-study-back {
+  margin-bottom: 28px;
+}
+
+.case-study-intro {
+  display: grid;
+  gap: 28px;
+}
+
+.case-study .case-study-eyebrow {
+  color: #36ffc4;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.case-study h1,
+.case-study h2 {
+  color: #fbfffa;
+  font-family: Geist, Inter, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.case-study h1 {
+  max-width: 22ch;
+  margin: 12px 0 18px;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.case-study .case-study-summary {
+  max-width: 62ch;
+}
+
+.case-study-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 32px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.case-study-meta dt {
+  margin-bottom: 4px;
+  color: #83958c;
+  font-size: 12px;
+}
+
+.case-study-meta dd {
+  margin: 0;
+  color: #e5e2e3;
+}
+
+.case-study-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 28px;
+  margin-top: 28px;
+  padding: 12px 0;
+  border-top: 1px solid #ffffff1a;
+}
+
+.case-study-nav a,
+.case-study-links a,
+.case-study-next a {
+  color: #36ffc4;
+}
+
+.case-study-section {
+  display: grid;
+  gap: 16px;
+  padding: 36px 0;
+  border-top: 1px solid #ffffff1a;
+  scroll-margin-top: 104px;
+}
+
+.case-study-copy {
+  min-width: 0;
+  max-width: 66ch;
+}
+
+.case-study h2 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+.case-study-copy > p + p {
+  margin-top: 18px;
+}
+
+.case-study-details {
+  margin: 24px 0 0;
+}
+
+.case-study-details > div + div {
+  margin-top: 22px;
+}
+
+.case-study-details dt {
+  margin-bottom: 6px;
+  color: #e5e2e3;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.case-study-details dd {
+  margin: 0;
+}
+
+.case-study-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 28px;
+  margin-top: 18px;
+}
+
+.case-study .case-study-note {
+  color: #a2b2a9;
+  font-size: 14px;
+}
+
+.case-study-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  min-height: 44px;
+  font-size: 14px;
+  color: #e5e2e3;
+}
+
+.case-study-next {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding-top: 24px;
+  border-top: 1px solid #ffffff1a;
+}
+
+:focus-visible {
+  outline: 2px solid #36ffc4;
+  outline-offset: 5px;
+}
+
+@media (min-width: 768px) {
+  .case-study {
+    padding: 136px 40px 80px;
+    font-size: 17px;
+  }
+
+  .case-study-intro {
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .case-study h1 {
+    font-size: 40px;
+  }
+
+  .case-study-meta {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0 0 24px;
+    border-left: 1px solid #ffffff1a;
+  }
+
+  .case-study-nav {
+    margin-top: 40px;
+  }
+
+  .case-study-section {
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 40px;
+    padding: 48px 0;
+  }
+
+  .case-study-section > .case-study-eyebrow {
+    padding-top: 6px;
+  }
+
+  .case-study h2 {
+    font-size: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

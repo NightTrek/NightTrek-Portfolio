@@ -1,7 +1,8 @@
 # Portfolio content review
 
-This change preserves the existing visual direction and focuses on narrative,
-case-study pages, links, metadata, and regression checks.
+This change preserves the dark/mint visual identity while simplifying the
+OpenAI, Cline, and Stable case studies. See design-review.md for the design
+references, typography scale, and interaction changes.
 
 ## Sources and attribution
 
@@ -28,8 +29,8 @@ maintenance review rather than presented as production-ready work.
 
 - Lint, TypeScript and production build pass.
 - Four interaction tests cover rapid/repeated selection, cancellation, and
-  document-level Escape handling. Four integration tests cover public source
-  phone patterns, routes/assets/anchors,
+  document-level Escape handling. Five integration tests cover the shared
+  case-study hierarchy, public-source phone patterns, routes/assets/anchors,
   retired starter content, canonical metadata and sitemap configuration.
 - Full and production dependency audits pass with zero findings. Scoped overrides
   update Glob/minimatch consumers after testing Sucrase compilation, rimraf
@@ -38,11 +39,15 @@ maintenance review rather than presented as production-ready work.
 - Existing live assets were independently checked for telephone exposure in text,
   images and sampled video frames; none was found. The regression test supplements
   that audit and does not replace future visual asset review.
-- Desktop and 390px mobile views inspected. Captioned, screenshot-based desktop
-  and mobile walkthrough videos were prepared separately. Normal menu navigation
-  and Cline/Stable selectors were exercised. Deterministic unit coverage checks
-  sub-150ms selection sequences that cannot be reliably timed with manual UI input.
-  The PR stays in draft for content-disclosure and walkthrough review.
+- Case-study layouts checked at 320, 390, 768, and 1440 CSS pixels in the
+  browser: no clipped text or horizontal overflow. Titles are 28/40px and body
+  text is 16/17px. Desktop and mobile views inspected visually.
+  Native section anchors, menu open/close/Escape, experience selectors, project
+  links, and Back/Forward were exercised against the production app.
+  Deterministic unit coverage checks sub-150ms selection sequences.
+  The earlier screenshot-based videos are not a live interaction walkthrough.
+  A new smooth recording is a separate deliverable. Keep this PR in draft for
+  the requested content-disclosure and walkthrough review.
 
 ## Link changes
 

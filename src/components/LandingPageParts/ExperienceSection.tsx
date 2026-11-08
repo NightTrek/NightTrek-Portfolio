@@ -37,7 +37,7 @@ const Experience: ExperienceJson = {
     title: 'Head of Operations',
     dates: 'January 2025 - January 2026',
     description:
-      'Leading operations to democratize the 10x engineer and make every developer 10x better',
+      'Product, hiring, and operations for an open-source coding agent',
     bullet: [
       'Joined as an early hire and became Head of Operations',
       'Helped build a 48-person team across engineering, product, and operations',

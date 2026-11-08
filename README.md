@@ -25,7 +25,8 @@ pnpm test
 ```
 
 The interaction unit tests cover rapid selection, cancellation, and document-level
-Escape handling. The integration tests expect a production server on port 3100. Override with
+Escape handling. Case-study regressions guard the shared hierarchy and section
+links. The integration tests expect a production server on port 3100. Override with
 `TEST_ORIGIN` when needed. They check routes, internal links, anchors, referenced
 assets, canonical metadata, sitemap configuration, retired starter pages, and
 phone-contact regressions in source and delivered HTML/JavaScript. Asset OCR and

@@ -109,3 +109,27 @@ test('robots and sitemap use canonical domain and omit retired routes', async ()
     assert.ok(!/example\.com|\/blog/.test(body));
   }
 });
+
+test('case studies keep a readable, shared hierarchy and working section links', async () => {
+  for (const route of ['/codex/', '/cline/', '/stable/']) {
+    const html = await (await fetch(`${origin}${route}`)).text();
+    assert.equal([...html.matchAll(/<h1\b/g)].length, 1, `${route}: one page title`);
+    assert.match(html, /class="case-study"/);
+    assert.match(html, /data-scroll-behavior="smooth"/);
+    assert.match(html, /class="case-study-meta"/);
+    assert.match(html, /aria-label="More work"/);
+    assert.ok(!/From enterprise needs to|cline run scale/.test(html));
+    for (const [, fragment] of html.matchAll(/href="#([^"]+)"/g)) {
+      assert.ok(html.includes(`id="${fragment}"`), `${route}: missing ${fragment}`);
+      assert.ok(html.includes(`id="${fragment}-title"`), `${route}: unlabeled section ${fragment}`);
+    }
+    if (route === '/codex/') {
+      assert.ok(!html.includes('codex-enterprise-hero.png'), 'No cropped full-height background on the Codex case study');
+      assert.match(html, /id="onboarding"/);
+    }
+  }
+  const css = await readFile(path.join(root, 'src/styles/global.css'), 'utf8');
+  assert.match(css, /\.case-study h1\s*\{[^}]*font-size: 28px;/);
+  assert.match(css, /\.case-study h1\s*\{[^}]*font-size: 40px;/);
+  assert.match(css, /prefers-reduced-motion: reduce/);
+});

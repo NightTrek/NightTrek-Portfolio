@@ -66,7 +66,7 @@ const Navigation = () => {
           ? 'border-b border-white/10 bg-obsidian-900/80 shadow-lg backdrop-blur-xl'
           : 'border-b border-white/5 bg-obsidian-900/55 backdrop-blur-md'
       }`}
-      initial="hidden"
+      initial={false}
       animate="visible"
       variants={navVariants}
     >
@@ -113,7 +113,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <motion.button
             variants={itemVariants}
-            className="group relative rounded-lg border border-white/10 bg-white/[0.03] md:hidden"
+            className="group relative min-h-11 min-w-11 rounded-lg border border-white/10 bg-white/[0.03] md:hidden"
             ref={menuButton}
             aria-label={menu ? 'Close navigation' : 'Open navigation'}
             aria-expanded={menu}

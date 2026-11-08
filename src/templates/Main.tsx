@@ -11,7 +11,7 @@ type IMainProps = {
 
 const Main = (props: IMainProps) => {
   return (
-    <div className="min-h-screen w-full select-none bg-obsidian-900 text-obsidian-100 antialiased">
+    <div className="min-h-screen w-full bg-obsidian-900 text-obsidian-100 antialiased">
       {props.meta}
 
       <div className="mx-auto">
@@ -32,8 +32,7 @@ const Main = (props: IMainProps) => {
               <Link href="/#contact">Contact</Link>
             </div>
             <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-obsidian-300">
-              © {new Date().getFullYear()} {AppConfig.title}. Built with
-              precision.
+              © {new Date().getFullYear()} {AppConfig.title}.
             </div>
           </div>
         </footer>
