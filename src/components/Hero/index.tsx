@@ -46,7 +46,7 @@ const Hero = () => {
               transition={{ duration: 0.8, ease: 'easeOut' }}
             >
               <p className="mb-4 font-mono text-[12px] font-bold uppercase tracking-[0.26em] text-default-400 drop-shadow-[0_0_16px_rgba(0,225,171,0.5)]">
-                OpenAI Codex / Enterprise AI
+                Entrepreneur / Technical leader
               </p>
 
               <h1 className="mb-5 max-w-3xl font-display text-[46px] font-extrabold leading-[1.02] text-obsidian-50 sm:text-[64px] md:text-[84px]">
@@ -54,10 +54,10 @@ const Hero = () => {
               </h1>
 
               <p className="mb-5 max-w-2xl text-[22px] leading-relaxed text-obsidian-100 md:text-[28px]">
-                I deploy agentic systems that help secure enterprises{' '}
-                <span className="font-semibold text-default-400">scale</span>
-                {` `}
-                how software gets built.
+                I bring people together to build products and{' '}
+                <span className="font-semibold text-default-400">
+                  drive technical outcomes.
+                </span>
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -89,9 +89,9 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian-900 via-transparent to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 grid grid-cols-3 border-t border-white/10 bg-obsidian-900/80 text-sm backdrop-blur">
                   {[
-                    ['NVIDIA', 'deployment'],
-                    ['Sandbox', 'controls'],
-                    ['LLM', 'review'],
+                    ['Product', 'direction'],
+                    ['Teams', 'leadership'],
+                    ['Code', 'execution'],
                   ].map(([value, label]) => (
                     <div key={label} className="border-r border-white/10 p-4">
                       <div className="font-display font-bold text-white">

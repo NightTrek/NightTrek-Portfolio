@@ -85,7 +85,7 @@ const FeaturedPortfolioSection = () => {
           name={'Codex enterprise deployment'}
           imageURL="/codex-enterprise-hero.png"
           description={
-            'Forward-deployed Codex into high-security enterprise environments, starting with NVIDIA. Focused on onboarding, secure sandboxing, deterministic controls, hardware-farm workflows, and the practical systems that let large companies delegate real engineering work to agents.'
+            'Turn customer needs into product priorities and help teams put Codex to work. Drove support for shared Linux NFS home directories with the engineering team, connecting a deployment barrier to a capability available across Codex.'
           }
           company="OpenAI"
           buttonTitle="Read the case study"
@@ -98,7 +98,7 @@ const FeaturedPortfolioSection = () => {
           name={'Scaling Coding Agents'}
           imageURL="/cline-product-mascot-card.png"
           description={
-            'Joined Cline to be the first AI engineer and ended up leading the company as Head of Operations. Scaled the team to 45 people, managed engineering and product teams, built product analytics and telemetry loops, and helped scale company revenue by millions of dollars while competing with the most funded companies in venture capital.'
+            'Joined as an early hire and became Head of Operations. Helped build a 48-person team, led product roadmap and partnerships, and helped launch Cline Accounts and the MCP marketplace. Cline reached 2.7 million installs by July 2025.'
           }
           company="Cline"
           buttonTitle="Read the Cline story"
@@ -107,7 +107,7 @@ const FeaturedPortfolioSection = () => {
           imgHeight={720}
           imagePosition="object-left"
           imageFit="contain"
-          tags={['Applied AI', 'Operations', 'Revenue']}
+          tags={['Applied AI', 'Product', 'Team building']}
         />
         <FeatureCard
           name={'Flowerpatch.app'}

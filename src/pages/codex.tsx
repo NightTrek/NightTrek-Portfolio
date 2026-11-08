@@ -8,8 +8,8 @@ const Codex = () => (
   <Main
     meta={
       <Meta
-        title="OpenAI Codex - Forward-Deployed Product Work"
-        description="Forward-deployed product work bringing Codex into secure enterprises, starting with NVIDIA."
+        title="OpenAI Codex | Daniel Steigman"
+        description="Turning enterprise customer needs into shipped product capabilities with the Codex team."
       />
     }
   >
@@ -26,24 +26,27 @@ const Codex = () => (
       <div className="relative z-10 grid w-full max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
         <div>
           <div className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-default-400">
-            Case study
+            OpenAI / Codex
           </div>
-          <h1 className="max-w-xl select-none text-3xl font-bold leading-tight text-white md:text-4xl">
-            OpenAI Codex in secure enterprise environments
+          <h1 className="max-w-xl text-3xl font-bold leading-tight text-white md:text-4xl">
+            From enterprise needs to shipped product.
           </h1>
           <p className="mt-8 text-lg leading-8 text-slate-300">
-            I work at OpenAI as a Product Manager focused on deploying Codex
-            into some of the most secure enterprises. My first major deployment
-            has been with NVIDIA, where Codex has moved from early use into
-            company-wide access for engineers and researchers.
+            I work on enterprise adoption of Codex at OpenAI. I bring customers,
+            deployment teams, and engineers together to turn difficult
+            requirements into products people can use.
+          </p>
+          <p className="mt-6 text-lg leading-8 text-slate-300">
+            The work starts with listening. I stay close to the technical
+            details, define what will solve the problem, and help the team get
+            it across the line.
           </p>
         </div>
-
         <div className="grid gap-4 sm:grid-cols-3">
           {[
-            ['NVIDIA', 'first deployment'],
-            ['4M+', 'weekly Codex users publicly reported'],
-            ['Secure', 'sandboxed agent workflows'],
+            ['Listen', 'customer needs'],
+            ['Align', 'product and engineering'],
+            ['Ship', 'usable capabilities'],
           ].map(([value, label]) => (
             <div
               key={label}
@@ -56,40 +59,40 @@ const Codex = () => (
             </div>
           ))}
           <div className="rounded-lg border border-default-500/40 bg-[#141b19]/90 p-5 text-base leading-7 text-slate-300 sm:col-span-3">
-            Public OpenAI updates reported Codex reaching 3 million weekly users
-            in early April 2026 and growing to more than 4 million two weeks
-            later. I joined during that phase of fast enterprise pull.
+            I lead by helping the people around me succeed. Clear priorities,
+            shared context, and hands-on technical work make that possible.
           </div>
         </div>
       </div>
     </div>
-
-    <div className="flex h-max w-full content-center justify-evenly bg-gradient-to-b from-[#111715] to-slate-950 px-4 py-24">
-      <div className="w-full max-w-5xl flex-col">
+    <section
+      className="flex h-max w-full content-center justify-evenly bg-gradient-to-b from-[#111715] to-slate-950 px-4 py-24"
+      id="nfs"
+    >
+      <div className="w-full max-w-5xl">
         <div className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-default-400">
-          Mandates
+          A shipped example
         </div>
         <h2 className="mb-10 text-2xl font-bold text-white">
-          What I am focused on
+          Making Codex work with shared Linux NFS home directories.
         </h2>
-
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {[
             {
-              title: 'NVIDIA-scale rollout',
-              body: 'Leading onboarding and enablement patterns for thousands of users, with workflows that span engineering, research, hardware-farm execution, and less technical enterprise use cases.',
+              title: 'Find the barrier',
+              body: 'Working with enterprise teams exposed a practical obstacle: Codex needed to work reliably when a Linux home directory lived on a shared network file system.',
             },
             {
-              title: 'Secure agent execution',
-              body: 'Partnering with security teams on sandboxing, deterministic controls, permissioning, and review systems that let agents work inside sensitive code and infrastructure.',
+              title: 'Define the product',
+              body: 'I connected that need across customers and defined the smallest useful capability that would let people get back to their work.',
             },
             {
-              title: 'Deterministic plus LLM review',
-              body: 'Exploring where conventional controls should be strict and repeatable, and where LLM review can add judgment, context, and coverage without replacing the security model.',
+              title: 'Bring the team together',
+              body: 'I drove the product work, secured engineering buy-in, and partnered with the engineers who built and shipped the support.',
             },
             {
-              title: 'Hands-on product development',
-              body: 'Using Codex daily for automations, PRs, Rust programming, workflow design, and direct product feedback to keep the deployment grounded in real technical usage.',
+              title: 'Make it available',
+              body: 'Codex now documents support for shared Linux NFS home directories. A specific enterprise barrier became a product capability that other teams can use.',
             },
           ].map((item) => (
             <div
@@ -99,23 +102,40 @@ const Codex = () => (
               <h3 className="mb-4 text-xl font-bold text-default-500">
                 {item.title}
               </h3>
-              <p className="text-slate-300">{item.body}</p>
+              <p className="leading-7 text-slate-300">{item.body}</p>
             </div>
           ))}
         </div>
-
         <div className="mt-12 flex flex-wrap gap-4">
           <ButtonBright
-            externalURL="https://openai.com/index/nvidia/"
-            title="OpenAI NVIDIA story"
+            externalURL="https://learn.chatgpt.com/docs/environments/network-file-systems"
+            title="Read the NFS documentation"
           />
           <ButtonBright
-            externalURL="https://openai.com/index/scaling-codex-to-enterprises-worldwide/"
-            title="Codex enterprise update"
+            externalURL="https://github.com/openai/codex/releases/tag/rust-v0.166.0"
+            title="Read the release notes"
           />
         </div>
       </div>
-    </div>
+    </section>
+    <section className="mx-auto max-w-5xl px-4 py-20">
+      <h2 className="mb-6 text-2xl font-bold text-white">
+        Working with enterprise teams.
+      </h2>
+      <p className="max-w-3xl text-lg leading-8 text-slate-300">
+        My work includes helping teams adopt Codex at NVIDIA. I connect the
+        lessons from deployment with product and engineering, and help the
+        people doing the rollout build practical ways to work with agents.
+      </p>
+      <p className="my-6 max-w-3xl text-lg leading-8 text-slate-300">
+        NVIDIA has publicly shared how its teams use Codex. Their story is the
+        best place to read about that adoption.
+      </p>
+      <ButtonBright
+        externalURL="https://blogs.nvidia.com/blog/openai-codex-gpt-5-5-ai-agents/"
+        title="Read NVIDIA’s public story"
+      />
+    </section>
   </Main>
 );
 

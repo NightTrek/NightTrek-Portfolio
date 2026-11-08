@@ -14,18 +14,13 @@ const ContactSection = () => {
           Contact Me
         </div>
         <div className="mt-4 max-w-2xl text-[17px] leading-8 text-obsidian-200">
-          I am actively interviewing for roles in{' '}
-          <span className="font-normal text-default-500">San Francisco.</span> I
-          am open to{' '}
-          <span className="font-normal text-default-500">hybrid</span> or{' '}
-          <span className="font-normal text-default-500">remote </span>
-          work opportunities. If you think I would be a good fit for your
-          company please set some time to chat.
+          I’m interested in ambitious products, useful AI, and the people
+          building them. Connect with me to talk about what you’re working on.
         </div>
         <div className="my-10 flex justify-evenly">
           <ButtonBright
-            title="Meet me"
-            externalURL="https://calendly.com/nighttrek/30min"
+            title="Connect on LinkedIn"
+            externalURL="https://www.linkedin.com/in/nighttrek/"
             style={undefined}
           />
         </div>

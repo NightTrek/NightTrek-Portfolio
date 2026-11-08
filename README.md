@@ -1,59 +1,50 @@
-### Night.Trek's Portoflio website.
+# Daniel Steigman’s portfolio
 
-Build using the following technologies:
-- ⚡ [Next.js](https://nextjs.org) for Static Site Generator
-- 🔥 Type checking [TypeScript](https://www.typescriptlang.org)
-- 💎 Integrate with [Tailwind CSS](https://tailwindcss.com)
-- ✅ Strict Mode for TypeScript and React 18
-- 📏 Linter with [ESLint](https://eslint.org) (default NextJS, NextJS Core Web Vitals, Tailwind CSS and Airbnb configuration)
-- 💖 Code Formatter with [Prettier](https://prettier.io)
-- 🦊 Husky for Git Hooks
-- 🚫 Lint-staged for running linters on Git staged files
-- 🚓 Lint git commit with Commitlint
-- 📓 Write standard compliant commit messages with Commitizen
-- 🦺 Unit Testing with Jest and React Testing Library
-- 🧪 E2E Testing with Cypress
-- 🎁 Automatic changelog generation with Semantic Release
-- 💡 Absolute Imports using `@` prefix
-- 🗂 VSCode configuration: Debug, Settings, Tasks and extension for PostCSS, ESLint, Prettier, TypeScript, Jest
-- 🤖 SEO metadata, JSON-LD and Open Graph tags with Next SEO
-- 🗺️ Sitemap.xml and robots.txt with next-sitemap
-- ⚙️ [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
-- 💯 Maximize lighthouse score
+Personal portfolio at https://www.ntrek.dev, built with Next.js Pages Router,
+React, TypeScript, Tailwind CSS, and Framer Motion. Hosted on Vercel.
 
-Deployed on firebase
+## Development
 
-### Requirements
+Use Node.js 24 and pnpm 9.11.0, as pinned in this repository.
 
-- Node.js 14+ and npm
-
-### Getting started
-
-Run the following command on your local environment:
-
-```shell
-git clone --depth=1 https://github.com/ixartz/Next-js-Boilerplate.git my-project-name
-cd my-project-name
-npm install
+```sh
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
-Then, you can run locally in development mode with live reload:
+## Verification
 
-```shell
-npm run dev
+```sh
+pnpm lint
+pnpm check-types
+pnpm audit --audit-level low
+pnpm build
+pnpm start --hostname 127.0.0.1 --port 3100
+# In another terminal:
+pnpm test
 ```
 
-Open http://localhost:3000 with your favorite browser to see your project.
+The integration tests expect a production server on port 3100. Override with
+`TEST_ORIGIN` when needed. They check routes, internal links, anchors, referenced
+assets, canonical metadata, sitemap configuration, retired starter pages, and
+phone-contact regressions in source and delivered HTML/JavaScript. Asset OCR and
+browser interaction/accessibility checks remain separate manual review steps.
 
-### Built using https://github.com/ixartz/Next-js-Boilerplate.git 
-A highly recomended boilerplate with modern features and easy to use and production level developer tooling
+## Content and assets
 
-### Boilerplate License
+- Homepage sections: `src/components/LandingPageParts/`
+- Case studies: `src/pages/{codex,cline,stable,nugbase,dual4t}.tsx`
+- Metadata: `src/layouts/Meta.tsx` and `src/utils/AppConfig.ts`
+- Static assets: `public/`
+- Sitemap generation: `next-sitemap.config.js`, run after each build
 
-Licensed under the MIT License, Copyright © 2022
+Use public sources for externally verifiable claims and keep customer-specific
+private details out of content. Project screenshots must be authentic, not
+reconstructed product UI. Do not add personal telephone contact information.
 
-See [LICENSE](LICENSE) for more information.
+## Review workflow
 
----
+Open draft pull requests for review. A PR can create a Vercel preview; merging
+main may update production. Do not merge or promote a deployment without approval.
 
-Made with ♥ by [CreativeDesignsGuru](https://creativedesignsguru.com) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
+Based on the MIT-licensed ixartz Next.js Boilerplate. See LICENSE.

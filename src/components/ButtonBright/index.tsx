@@ -50,6 +50,7 @@ const ButtonBright = (props: ButtonProps) => {
         href={props.externalURL}
         title={props.title}
         target="_blank"
+        rel="noopener noreferrer"
         className={outerStyle}
       >
         <div className={innerStyle}>{props.title}</div>

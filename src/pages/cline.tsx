@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 
 import ButtonBright, { ButtonStyles } from '@/components/ButtonBright';
@@ -7,19 +6,19 @@ import { Main } from '@/templates/Main';
 
 const Cline = () => {
   const stats = [
-    ['45+', 'world-class applied AI engineers'],
-    ['8M+', 'public installs across all platforms'],
-    ['62k+', 'public GitHub stars'],
-    ['$32M', 'venture funding raised by Cline'],
+    ['48', 'people on the team we built'],
+    ['2.7M', 'installs by July 2025'],
+    ['Product', 'roadmap and strategy'],
+    ['MCP', 'marketplace launch'],
   ];
 
   const work = [
-    'Joined Cline to be the first AI engineer and ended up leading the company as Head of Operations.',
-    'Scaled the team to 45 people while maintaining high hiring standards.',
-    'Managed multiple engineering teams and the product team to align efforts with enterprise data strategies.',
-    'Helped scale company revenue by millions of dollars.',
-    'Implemented a product analytics and telemetry strategy to monitor agent performance in real-world applications.',
-    'Pushed the boundaries of Agentic AI coding to develop production-ready applications, enhancing our technological capabilities.',
+    'Joined as an early hire and became Head of Operations.',
+    'Helped build a 48-person team across engineering, product, and operations.',
+    'Led product roadmap, strategy, and partnerships alongside the team.',
+    'Helped launch Cline Accounts and enterprise administration capabilities.',
+    'Helped launch the MCP marketplace so developers could discover and install tools inside Cline.',
+    'Built product analytics and feedback loops to connect real usage with product decisions.',
   ];
 
   return (
@@ -56,14 +55,14 @@ const Cline = () => {
               Head of Operations · Full-time · Jan 2025 - Jan 2026
             </div>
             <h1 className="mt-5 max-w-3xl font-display text-[48px] font-extrabold leading-[1.03] text-obsidian-50 md:text-[76px]">
-              Scaling the open coding agent into a real company.
+              Building the team behind an open coding agent.
             </h1>
             <p className="mt-6 max-w-2xl text-[19px] leading-8 text-obsidian-200 md:text-[22px]">
-              At Cline, my focus was accelerating the development of a
-              world-class AI team and pushing agentic coding toward
-              production-ready applications. The common thread throughout the
-              work was a commitment to innovation and the improvement of
-              engineering practices.
+              I joined Cline early and became Head of Operations. I brought
+              product, engineering, hiring, and partnerships together to help
+              the team turn an open-source coding agent into a company. The work
+              was about giving talented people the direction and support to
+              build something developers wanted to use.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <ButtonBright
@@ -96,8 +95,8 @@ const Cline = () => {
             </div>
             <div className="mt-5 border-l-2 border-default-500 bg-obsidian-900 p-5 font-mono text-[13px] leading-7 text-obsidian-200">
               <div className="mb-2 text-default-400">$ cline run scale</div>
-              <div>&gt; team: 45+ applied AI engineers</div>
-              <div>&gt; surface: IDE + CLI + SDK</div>
+              <div>&gt; team: 48 people</div>
+              <div>&gt; product: open coding agent</div>
               <div>&gt; motion: open-source to enterprise</div>
               <div className="animate-pulse text-default-400">_</div>
             </div>
@@ -108,17 +107,16 @@ const Cline = () => {
       <section className="mx-auto grid max-w-7xl gap-5 px-5 py-16 md:px-10 lg:grid-cols-[0.85fr_1.15fr] lg:py-24">
         <div className="glass-panel rounded-3xl p-6 md:p-8">
           <div className="font-mono text-[12px] font-bold uppercase tracking-[0.18em] text-electric-300">
-            Business and Technology Evangelism
+            Product and team leadership
           </div>
           <h2 className="mt-4 font-display text-[34px] font-bold leading-tight text-obsidian-50 md:text-[46px]">
-            Competing with the most funded companies in venture capital.
+            Build the team. Give it direction. Ship together.
           </h2>
           <p className="mt-5 text-[17px] leading-8 text-obsidian-200">
-            Cline's goal was to democratize access to sophisticated engineering
-            tools, empowering a new generation of developers to create
-            transformative technologies. My role was to help turn that ambition
-            into operating rhythm: hiring, execution, product feedback loops,
-            analytics, and applied AI delivery.
+            We wanted more people to be able to build software with an agent. I
+            helped turn that ambition into a roadmap, an operating rhythm, and a
+            team that could execute. The outcomes belonged to that team. My job
+            was to help them succeed.
           </p>
         </div>
 
@@ -140,6 +138,36 @@ const Cline = () => {
         </div>
       </section>
 
+      <section className="mx-auto max-w-7xl px-5 pb-16 md:px-10">
+        <div className="glass-panel rounded-3xl p-6 md:p-8">
+          <h2 className="font-display text-3xl font-bold text-obsidian-50">
+            Making MCP tools easier to use.
+          </h2>
+          <p className="mt-5 max-w-4xl text-lg leading-8 text-obsidian-200">
+            We launched what was then the largest in-app MCP marketplace. We
+            helped move MCP from something developers had to configure by hand
+            toward tools they could discover and install inside their coding
+            agent. The marketplace connected the agent to a growing ecosystem of
+            capabilities.
+          </p>
+        </div>
+      </section>
+      <section className="mx-auto max-w-7xl px-5 pb-16 md:px-10">
+        <div className="glass-panel rounded-3xl p-6 md:p-8">
+          <h2 className="font-display text-3xl font-bold text-obsidian-50">
+            2.7 million installs by July 2025.
+          </h2>
+          <p className="my-5 max-w-4xl text-lg leading-8 text-obsidian-200">
+            Cline’s July 2025 funding announcement reported 2.7 million installs
+            across VS Marketplace and Open VSX. It was a milestone for the
+            product, the team, and the open-source community building around it.
+          </p>
+          <ButtonBright
+            externalURL="https://cline.bot/blog/cline-raises-32m-series-a-and-seed-funding-building-the-open-source-ai-coding-agent-that-enterprises-trust"
+            title="Read Cline’s announcement"
+          />
+        </div>
+      </section>
       <section className="mx-auto max-w-7xl px-5 pb-24 md:px-10">
         <div className="glass-panel rounded-3xl p-6 md:p-8">
           <div className="mb-4 font-display text-[30px] font-bold text-obsidian-50">

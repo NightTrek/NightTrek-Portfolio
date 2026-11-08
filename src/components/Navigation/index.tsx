@@ -104,6 +104,12 @@ const Navigation = () => {
           <motion.button
             variants={itemVariants}
             className="group relative rounded-lg border border-white/10 bg-white/[0.03] md:hidden"
+            aria-label={menu ? 'Close navigation' : 'Open navigation'}
+            aria-expanded={menu}
+            aria-controls="mobile-navigation"
+            onKeyDown={(event) => {
+              if (event.key === 'Escape') setMenu(false);
+            }}
             onClick={() => setMenu(!menu)}
           >
             <div className="absolute -inset-2 rounded-lg bg-gradient-to-r from-default-500/20 to-default-400/20 opacity-0 blur transition duration-300 group-hover:opacity-100" />
@@ -142,6 +148,7 @@ const Navigation = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
+              id="mobile-navigation"
               className="overflow-hidden md:hidden"
             >
               <motion.ul
