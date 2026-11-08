@@ -29,10 +29,10 @@ maintenance review rather than presented as production-ready work.
 - Lint, TypeScript and production build pass.
 - Four integration tests cover public source phone patterns, routes/assets/anchors,
   retired starter content, canonical metadata and sitemap configuration.
-- Production dependency audit passes. Full dependency audit retains five moderate
-  development-tooling findings in Glob/minimatch. No high or critical findings
-  remain. The existing low-threshold CI audit is expected to block until those
-  cross-major dependency changes are separately validated; it has not been weakened.
+- Full and production dependency audits pass with zero findings. Scoped overrides
+  update Glob/minimatch consumers after testing Sucrase compilation, rimraf
+  async/sync glob operations, TypeScript ESLint matching, and cancellation. The
+  existing low-threshold audit gate is unchanged.
 - Existing live assets were independently checked for telephone exposure in text,
   images and sampled video frames; none was found. The regression test supplements
   that audit and does not replace future visual asset review.
