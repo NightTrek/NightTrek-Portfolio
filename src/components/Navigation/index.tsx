@@ -1,10 +1,20 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
+import { listenForEscape } from '@/utils/interaction';
 
 const Navigation = () => {
   const [menu, setMenu] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    if (!menu) return undefined;
+    return listenForEscape(document, () => {
+      setMenu(false);
+      menuButton.current?.focus();
+    });
+  }, [menu]);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -104,12 +114,10 @@ const Navigation = () => {
           <motion.button
             variants={itemVariants}
             className="group relative rounded-lg border border-white/10 bg-white/[0.03] md:hidden"
+            ref={menuButton}
             aria-label={menu ? 'Close navigation' : 'Open navigation'}
             aria-expanded={menu}
             aria-controls="mobile-navigation"
-            onKeyDown={(event) => {
-              if (event.key === 'Escape') setMenu(false);
-            }}
             onClick={() => setMenu(!menu)}
           >
             <div className="absolute -inset-2 rounded-lg bg-gradient-to-r from-default-500/20 to-default-400/20 opacity-0 blur transition duration-300 group-hover:opacity-100" />

@@ -16,7 +16,7 @@
     "check-types": "next typegen && tsc --noEmit --pretty",
     "audit": "pnpm audit --audit-level moderate",
     "postbuild": "next-sitemap",
-    "test": "node --test scripts/verify-site.mjs"
+    "test": "node --test scripts/interaction.test.mjs scripts/verify-site.mjs"
   },
   "dependencies": {
     "framer-motion": "12.40.0",

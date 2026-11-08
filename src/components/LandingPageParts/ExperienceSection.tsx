@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+
+import { createSelectionTransition } from '@/utils/interaction';
 
 import ButtonBright from '../ButtonBright';
 
@@ -96,7 +98,7 @@ const Experience: ExperienceJson = {
       'Implemented custom Linux firmware to read sensor data of Siemens PLC',
       'Implemented custom live data ingestion service that connected live data to the app through a custom VPN',
     ],
-    link: '/agromation',
+    link: '/dual4t',
   },
   BHOGART: {
     company: 'BHOGART',
@@ -108,13 +110,18 @@ const Experience: ExperienceJson = {
       'Design and implementation of innovative operating procedures and systems design, includng manufacturing',
       'Marketing and web development, including point of sales systems and community outreach progams such as conferences and events',
     ],
-    link: '/bhogart',
+    link: '/#experience',
   },
 };
 
 const ExperienceSection = () => {
   const [focus, setFocus] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const transition = useMemo(
+    () => createSelectionTransition(setFocus, setIsAnimating),
+    [],
+  );
+  useEffect(() => () => transition.cancel(), [transition]);
 
   const getExperienceKey = (number: number): ExperienceType => {
     const keys = Object.keys(Experience);
@@ -132,13 +139,7 @@ const ExperienceSection = () => {
   };
 
   const handleExperienceChange = (index: number) => {
-    if (index === focus) return;
-
-    setIsAnimating(true);
-    setTimeout(() => {
-      setFocus(index);
-      setIsAnimating(false);
-    }, 150);
+    transition.select(index, focus);
   };
 
   const currentExperience = getExperienceKey(focus);

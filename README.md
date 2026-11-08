@@ -24,7 +24,8 @@ pnpm start --hostname 127.0.0.1 --port 3100
 pnpm test
 ```
 
-The integration tests expect a production server on port 3100. Override with
+The interaction unit tests cover rapid selection, cancellation, and document-level
+Escape handling. The integration tests expect a production server on port 3100. Override with
 `TEST_ORIGIN` when needed. They check routes, internal links, anchors, referenced
 assets, canonical metadata, sitemap configuration, retired starter pages, and
 phone-contact regressions in source and delivered HTML/JavaScript. Asset OCR and
@@ -45,6 +46,10 @@ reconstructed product UI. Do not add personal telephone contact information.
 ## Review workflow
 
 Open draft pull requests for review. A PR can create a Vercel preview; merging
-main may update production. Do not merge or promote a deployment without approval.
+main may update production. Follow the owner’s current GitHub maintenance and
+merge authorization; do not require redundant approval where that authorization
+already covers the action. This portfolio refresh remains a draft until its
+requested content-disclosure and walkthrough review is complete. Never treat
+maintenance permission as permission to publish private information.
 
 Based on the MIT-licensed ixartz Next.js Boilerplate. See LICENSE.

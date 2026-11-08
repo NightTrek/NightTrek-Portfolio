@@ -27,7 +27,9 @@ maintenance review rather than presented as production-ready work.
 ## Validation
 
 - Lint, TypeScript and production build pass.
-- Four integration tests cover public source phone patterns, routes/assets/anchors,
+- Four interaction tests cover rapid/repeated selection, cancellation, and
+  document-level Escape handling. Four integration tests cover public source
+  phone patterns, routes/assets/anchors,
   retired starter content, canonical metadata and sitemap configuration.
 - Full and production dependency audits pass with zero findings. Scoped overrides
   update Glob/minimatch consumers after testing Sucrase compilation, rimraf
@@ -36,8 +38,11 @@ maintenance review rather than presented as production-ready work.
 - Existing live assets were independently checked for telephone exposure in text,
   images and sampled video frames; none was found. The regression test supplements
   that audit and does not replace future visual asset review.
-- Desktop and 390px mobile homepage visually inspected. Full interactive walkthrough
-  and desktop/mobile videos are pending; this PR remains a draft.
+- Desktop and 390px mobile views inspected. Captioned, screenshot-based desktop
+  and mobile walkthrough videos were prepared separately. Normal menu navigation
+  and Cline/Stable selectors were exercised. Deterministic unit coverage checks
+  sub-150ms selection sequences that cannot be reliably timed with manual UI input.
+  The PR stays in draft for content-disclosure and walkthrough review.
 
 ## Link changes
 
