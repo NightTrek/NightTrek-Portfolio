@@ -42,3 +42,18 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      - name: Verify public routes, metadata, and privacy guards
+        run: |
+          pnpm start --hostname 127.0.0.1 --port 3100 > /tmp/portfolio-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID"' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:3100/ > /dev/null; then
+              pnpm test
+              exit $?
+            fi
+            sleep 1
+          done
+          cat /tmp/portfolio-server.log
+          exit 1
