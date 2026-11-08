@@ -44,8 +44,7 @@ const Dual4tPage = () => {
               alt="Agromation grow room software"
               width={384}
               height={384}
-              style={{ borderRadius: '16px', width: '384px', height: '384px' }}
-              layout="fixed"
+              style={{ borderRadius: '16px', maxWidth: '100%', height: 'auto' }}
             />
           </div>
           <div className="my-6 flex w-full flex-col justify-evenly ">

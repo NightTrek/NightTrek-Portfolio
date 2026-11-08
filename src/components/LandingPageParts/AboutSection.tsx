@@ -12,51 +12,23 @@ const AboutMeSection = () => (
       </div>
       <div className="flex w-full flex-col justify-between">
         <div className="text-[17px] leading-8 text-obsidian-200">
-          I have had a passion for software engineering ever since I began
-          building Minecraft mods in Java back in 2013. Before I decided to make
-          software my career I was pulled into the chaotic and fast-paced world
-          of a hardware start up. My time working at the hardware manufacturer
-          gave me the experience to handle both sales and support operations as
-          well as marketing and product development.
+          I’m an entrepreneur and technical leader. I bring people together to
+          build products, solve difficult problems, and help their teams
+          succeed. My background spans software engineering, product, and
+          running startups.
         </div>
         <div className="my-6 text-[17px] leading-8 text-obsidian-200">
-          In 2018 my passion for blockchain technology led me to cofound the
-          Web3 company Nugbase. Nugbase&rsquo;s core product is an NFT
-          collection and Web3 game called{' '}
-          <a
-            href="https://flowerpatch.app/"
-            className="font-medium text-default-400"
-            target="_blank"
-          >
-            Flowerpatch.
-          </a>{' '}
-          My role started off as business operations but I quickly evolved to a
-          software engineering role. Our rapid growth pushed me to lead our
-          contract engineering division, where I consulted with clients to
-          design and build their Web3 products.
+          At OpenAI, I work on enterprise adoption of Codex, turning what I
+          learn from customers into product priorities and practical ways to use
+          AI. Before that, I helped build Cline as an early hire and Head of
+          Operations, bringing product, engineering, hiring, and partnerships
+          together.
         </div>
         <div className="mb-6 text-[17px] leading-8 text-obsidian-200">
-          In 2023 I left Nugbase to work at a smart wallet company called
-          <a
-            href="https://fun.xyz/"
-            className="font-medium text-default-400"
-            target="_blank"
-          >
-            {' '}
-            Fun.xyz
-          </a>
-          . My primary role at{' '}
-          <a
-            href="https://fun.xyz/"
-            className="font-medium text-default-400"
-            target="_blank"
-          >
-            Fun.xyz
-          </a>{' '}
-          was designing and developing the React SDK, improving the developer
-          experience for our customers. I worked directly with our customers and
-          built Role-based access control features. I am especially proud of my
-          work building multi-factor authentication into Ethereum wallets.
+          I stay close to the code. I’ve built native iOS apps, wallet
+          infrastructure, developer tools, and connected hardware products. I
+          care about making powerful technology useful without requiring people
+          to become experts in how it works.
         </div>
         <div className="mt-8 flex flex-col justify-between text-obsidian-200">
           <div className="font-mono text-[12px] font-bold uppercase tracking-[0.18em] text-electric-300">
@@ -105,28 +77,23 @@ const AboutMeSection = () => (
       </div>
       <div className="mt-8 flex flex-col justify-between text-obsidian-200">
         <div className="font-mono text-[12px] font-bold uppercase tracking-[0.18em] text-electric-300">
-          Blockchain competencies
+          How I work
         </div>
         <ul className="mt-4 space-y-3 text-[15px] leading-7">
           <li>
-            <span className="font-bold text-obsidian-100">Blockchains: </span>
-            Ethereum / Polygon / Arbitrum / Optimism
-          </li>
-          <li>
-            <span className="font-bold text-obsidian-100">Front-end Web3:</span>{' '}
-            Wagmi, Viem, EthersJS
+            <span className="font-bold text-obsidian-100">Listen closely.</span>{' '}
+            Find the real problem behind the request.
           </li>
           <li>
             <span className="font-bold text-obsidian-100">
-              Backend Ethereum services:
+              Bring people together.
             </span>{' '}
-            Go Ethereum (Geth)
+            Give teams direction, context, and room to do their best work.
           </li>
           <li>
-            <span className="font-bold text-obsidian-100">
-              Smart contract development:{' '}
-            </span>
-            Solidity, OpenZepplin, Hardhat, and Truffle suite
+            <span className="font-bold text-obsidian-100">Build and ship.</span>{' '}
+            Stay technical enough to turn a product decision into something
+            people can use.
           </li>
         </ul>
       </div>

@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import ButtonBright, { ButtonStyles } from '@/components/ButtonBright';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
@@ -37,7 +36,10 @@ const Nugbase = () => (
         </div>
       </div>
     </div>
-    <div className="my-10 flex h-max w-full content-center justify-evenly bg-gradient-to-b from-nugbasePurple-300 to-nugbasePurple-400 bg-top bg-no-repeat py-20 sm:bg-fp-background">
+    <div
+      id="flowerpatch"
+      className="my-10 flex h-max w-full content-center justify-evenly bg-gradient-to-b from-nugbasePurple-300 to-nugbasePurple-400 bg-top bg-no-repeat py-20 sm:bg-fp-background"
+    >
       <div className="w-full max-w-2xl flex-col ">
         <div className="flex px-2 font-bold text-white">Flowerpatch</div>
 
@@ -58,13 +60,6 @@ const Nugbase = () => (
               Polygon OpenSea store, where it became one of the largest
               Collections with over 150,000 FLOWER NFTs.
             </p>
-          </div>
-          <div className="flex w-full justify-end px-4">
-            <ButtonBright
-              externalURL="https://flowerpatch.app"
-              title="Try our game"
-              style={ButtonStyles.FLOWERPATCH}
-            />
           </div>
         </div>
       </div>

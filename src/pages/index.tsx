@@ -11,8 +11,8 @@ const Index = () => {
     <Main
       meta={
         <Meta
-          title="Daniel Steigman | OpenAI PM and forward-deployed Codex lead"
-          description="Product leader and technical operator helping secure enterprises deploy Codex at company scale."
+          title="Daniel Steigman | Entrepreneur & Technical Leader"
+          description="Entrepreneur and technical leader bringing people together to build products and drive outcomes. Enterprise AI at OpenAI, Cline, and hands-on engineering."
         />
       }
     >

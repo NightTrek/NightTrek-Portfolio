@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+
+import { createSelectionTransition } from '@/utils/interaction';
 
 import ButtonBright from '../ButtonBright';
 
@@ -23,10 +25,10 @@ const Experience: ExperienceJson = {
     description:
       'Forward-deployed product work for secure enterprise Codex adoption.',
     bullet: [
-      'Brought Codex into NVIDIA-scale engineering and hardware-farm workflows',
-      'Built onboarding patterns for thousands of enterprise users',
-      'Worked on sandboxing, deterministic controls, and LLM review with security teams',
-      'Stayed hands-on with Codex automations, Rust, product feedback, and PRs',
+      'Bring customer needs into product priorities for enterprise Codex adoption',
+      'Help deployment teams turn complex requirements into practical workflows',
+      'Drove shared Linux NFS home-directory support from customer need to shipped capability with the engineering team',
+      'Stay hands-on with engineering, product feedback, and enablement',
     ],
     link: '/codex',
   },
@@ -35,15 +37,14 @@ const Experience: ExperienceJson = {
     title: 'Head of Operations',
     dates: 'January 2025 - January 2026',
     description:
-      'Leading operations to democratize the 10x engineer and make every developer 10x better',
+      'Product, hiring, and operations for an open-source coding agent',
     bullet: [
-      'Joined Cline to be the first AI engineer and ended up leading the company as Head of Operations',
-      'Scaled the team to 45 people while maintaining high hiring standards',
-      "Launched Cline's first paid product (Cline Accounts) driving monetization strategy",
-      'Managed multiple engineering teams and the product team to align efforts with enterprise data strategies',
-      'Contributed to explosive user growth from 300K to 2M users in 6 months',
-      'Helped scale company revenue by millions of dollars',
-      'Implemented product analytics and telemetry strategy to monitor agent performance in real-world applications',
+      'Joined as an early hire and became Head of Operations',
+      'Helped build a 48-person team across engineering, product, and operations',
+      'Led product roadmap, strategy, and partnerships alongside the team',
+      'Helped launch Cline Accounts and enterprise administration capabilities',
+      'Helped launch the MCP marketplace, making tools easier to discover and install',
+      'Cline reached 2.7 million installs by July 2025',
     ],
     link: '/cline',
   },
@@ -54,12 +55,10 @@ const Experience: ExperienceJson = {
     description:
       'First engineer responsible for building iOS app and multi-chain infrastructure',
     bullet: [
-      'Built production iOS app for Arbitrum using Swift with multi-chain account abstraction wallets',
-      'Developed custom Swift SDK for 4337 smart contract transactions - first of its kind',
-      'Implemented cross-chain USDC transfer support across multiple blockchain networks',
-      'Built cross-chain bridge infrastructure enabling seamless chain switching',
-      'Added fiat on/off ramping with Plaid integration for simplified user experience',
-      'Improved engineering practices and scaled backend infrastructure including database security',
+      'Built the native Swift and SwiftUI app experience and primary backend',
+      'Connected smart-contract wallets, signing, and transaction indexing',
+      'Integrated Plaid and Bridge into user-facing financial flows',
+      'Built charts and account experiences that made complex infrastructure usable',
     ],
     link: '/stable',
   },
@@ -99,7 +98,7 @@ const Experience: ExperienceJson = {
       'Implemented custom Linux firmware to read sensor data of Siemens PLC',
       'Implemented custom live data ingestion service that connected live data to the app through a custom VPN',
     ],
-    link: '/agromation',
+    link: '/dual4t',
   },
   BHOGART: {
     company: 'BHOGART',
@@ -111,13 +110,18 @@ const Experience: ExperienceJson = {
       'Design and implementation of innovative operating procedures and systems design, includng manufacturing',
       'Marketing and web development, including point of sales systems and community outreach progams such as conferences and events',
     ],
-    link: '/bhogart',
+    link: '/#experience',
   },
 };
 
 const ExperienceSection = () => {
   const [focus, setFocus] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const transition = useMemo(
+    () => createSelectionTransition(setFocus, setIsAnimating),
+    [],
+  );
+  useEffect(() => () => transition.cancel(), [transition]);
 
   const getExperienceKey = (number: number): ExperienceType => {
     const keys = Object.keys(Experience);
@@ -135,13 +139,7 @@ const ExperienceSection = () => {
   };
 
   const handleExperienceChange = (index: number) => {
-    if (index === focus) return;
-
-    setIsAnimating(true);
-    setTimeout(() => {
-      setFocus(index);
-      setIsAnimating(false);
-    }, 150);
+    transition.select(index, focus);
   };
 
   const currentExperience = getExperienceKey(focus);

@@ -11,6 +11,10 @@ type IMetaProps = {
 
 const Meta = (props: IMetaProps) => {
   const router = useRouter();
+  const pathname = router.asPath.split(/[?#]/)[0] || '/';
+  const canonical =
+    props.canonical ||
+    `${AppConfig.siteUrl}${pathname.endsWith('/') ? pathname : `${pathname}/`}`;
 
   return (
     <>
@@ -49,19 +53,21 @@ const Meta = (props: IMetaProps) => {
       <Head>
         <title>{props.title}</title>
         <meta name="description" content={props.description} key="desc" />
-        {props.canonical && (
-          <link rel="canonical" href={props.canonical} key="canonical" />
-        )}
+        {canonical && <link rel="canonical" href={canonical} key="canonical" />}
         <meta property="og:title" content={props.title} key="og-title" />
         <meta
           property="og:description"
           content={props.description}
           key="og-desc"
         />
-        {props.canonical && (
-          <meta property="og:url" content={props.canonical} key="og-url" />
+        {canonical && (
+          <meta property="og:url" content={canonical} key="og-url" />
         )}
-        <meta property="og:locale" content={AppConfig.locale} key="og-locale" />
+        <meta
+          property="og:locale"
+          content={AppConfig.ogLocale}
+          key="og-locale"
+        />
         <meta
           property="og:site_name"
           content={AppConfig.site_name}
@@ -69,11 +75,11 @@ const Meta = (props: IMetaProps) => {
         />
         <meta
           property="og:image"
-          content={`${router.basePath}/OG/HomePageOG.jpg`}
+          content={`${AppConfig.siteUrl}${router.basePath}/OG/HomePageOG.jpg`}
           key="og-image"
         />
-        <meta property="og:image:width" content="800" key="og-image-width" />
-        <meta property="og:image:height" content="600" key="og-image-height" />
+        <meta property="og:image:width" content="1872" key="og-image-width" />
+        <meta property="og:image:height" content="1203" key="og-image-height" />
         <meta
           property="og:image:alt"
           content="Home page image"
